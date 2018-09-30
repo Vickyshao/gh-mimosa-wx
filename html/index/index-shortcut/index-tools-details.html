@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>理财小工具</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-001 **/
+		</style>
+		<style type="text/css">
+		.mui-fullscreen .mui-slider-group.app_sp_top { top: 50px;}
+   		.app_tc{text-align: center;}
+   		.boxbox{width: 100%;height: 40px;position: relative;}
+   		.mui-segmented-control.mui-scroll-wrapper{height: 50px;}
+   		 .app-control-items{
+   			background-image: url("../../../images/measure-2.png");margin: 0;width: 50px;padding: 0;height: 40px;
+   			background-repeat: no-repeat;
+   			background-position: bottom;
+   			background-size: 100% 15px;
+   			position: relative;
+   			line-height: 14px;
+   			overflow: visible;
+   			display: inline-block;
+   			border-bottom: 1px solid #eee;	
+   		}
+   		.f-num{position: absolute;top: 0px;font-size: 12px;color: #dfdfdf;line-height: 14px;}
+   		.app-control-items .num{
+   			position: absolute;top: 0px;font-size: 12px;color: #dfdfdf;
+   		}
+   		.pointer{width: 1px;height :50px;position :absolute;z-index: 3;left: 50%;bottom :0;background: #f4551f;}
+   		
+   		.app_investinput{width: 100%;border: none !important;padding: 0 !important;margin: 0 !important;}
+   		.app_bgf{background-color: #fff;}
+		</style>
+	</head>
+
+	<body class="app_bgf">
+		<header class="mui-bar mui-bar-nav app_header app_header0">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title"></h1>
+			
+		</header>
+		<div class="mui-content app_bgf app_p15 app_mui_content0">
+			<div class=""><span id="app_title1"></span>(<span id="app_unit"></span>)</div>
+			<div class="app_tc count"><input id="app_count_01" type="text" class="app_tc app_f40 app_investinput" value="0" oninput="GHUTILS.checkInput(this, 3)" /></div>
+			<div class="boxbox">
+				<div class="pointer"></div>
+				<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" id="app_scroll_01">
+				    <div class="mui-scroll" id="app_scroll_1">
+				    	<!--<span class="f-num">0</span>
+				    	<div class="app-control-items mui-control-first">
+				            <span class="num">100</span>
+				        </div><div class="app-control-items">
+				           <span class="num">200</span>
+				        </div><div class="app-control-items">
+				            <span class="num">300</span>
+				        </div><div class="app-control-items">
+				            <span class="num">400</span>
+				        </div><div class="app-control-items">
+				           <span class="num">500</span>
+				        </div><div class="app-control-items">
+				           <span class="num">600</span>
+				        </div><div class="app-control-items">
+				           <span class="num">700</span>
+				        </div><div class="app-control-items">
+				           <span class="num">800</span>
+				        </div><div class="app-control-items">
+				           <span class="num">900</span>
+				        </div><div class="app-control-items">
+				           <span class="num">1000</span>
+				        </div><div class="app-control-items">
+				           <span class="num">10000000</span>
+				        </div>-->
+				    </div>
+				</div>
+			</div>
+			<!--<div class="app_mt10 app_bgblue"></div>-->
+		</div>
+		<div class="mui-content app_bgf app_p15" style="padding-top: 15px;">
+			<div class=""><span id="app_title2"></span>(年)</div>
+			<div class="app_tc count"><input id="app_count_02" type="text" class="app_tc app_f40 app_investinput" value="0" oninput="GHUTILS.checkInput(this, 3)" /></div>
+			<div class="boxbox">
+				<div class="pointer"></div>
+				<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" id="app_scroll_02">
+				    <div class="mui-scroll" id="app_scroll_2">
+				    	<!--<span class="f-num">0</span>
+				    	<div class="app-control-items mui-control-first">
+				            <span class="num">100</span>
+				        </div><div class="app-control-items">
+				           <span class="num">200</span>
+				        </div><div class="app-control-items">
+				            <span class="num">300</span>
+				        </div><div class="app-control-items">
+				            <span class="num">400</span>
+				        </div><div class="app-control-items">
+				           <span class="num">500</span>
+				        </div><div class="app-control-items">
+				           <span class="num">600</span>
+				        </div><div class="app-control-items">
+				           <span class="num">700</span>
+				        </div><div class="app-control-items">
+				           <span class="num">800</span>
+				        </div><div class="app-control-items">
+				           <span class="num">900</span>
+				        </div><div class="app-control-items">
+				           <span class="num">1000</span>
+				        </div><div class="app-control-items">
+				           <span class="num">10000000</span>
+				        </div>-->
+				    </div>
+				</div>
+			</div>
+			<!--<div class="app_mt10 app_bgblue"></div>-->
+		</div>
+		<div class="mui-content app_bgf app_p15" style="padding-top: 15px;">
+			<div class="">理想利率(%)</div>
+			<div class="app_tc count"><input id="app_count_03" type="text" class="app_tc app_f40 app_investinput" value="0" oninput="GHUTILS.checkInput(this, 3)" /></div>
+			<div class="boxbox">
+				<div class="pointer"></div>
+				<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" id="app_scroll_03">
+				    <div class="mui-scroll" id="app_scroll_3">
+				    	<!--<span class="f-num">0</span>
+				    	<div class="app-control-items mui-control-first">
+				            <span class="num">1</span>
+				        </div><div class="app-control-items">
+				           <span class="num">2</span>
+				        </div><div class="app-control-items">
+				            <span class="num">3</span>
+				        </div><div class="app-control-items">
+				            <span class="num">4</span>
+				        </div><div class="app-control-items">
+				           <span class="num">5</span>
+				        </div><div class="app-control-items">
+				           <span class="num">6</span>
+				        </div><div class="app-control-items">
+				           <span class="num">7</span>
+				        </div><div class="app-control-items">
+				           <span class="num">8</span>
+				        </div><div class="app-control-items">
+				           <span class="num">9</span>
+				        </div><div class="app-control-items">
+				           <span class="num">10</span>
+				        </div><div class="app-control-items">
+				           <span class="num">11</span>
+				        </div><div class="app-control-items">
+				           <span class="num">12</span>
+				        </div><div class="app-control-items">
+				           <span class="num">13</span>
+				        </div><div class="app-control-items">
+				           <span class="num">14</span>
+				        </div><div class="app-control-items">
+				           <span class="num">15</span>
+				        </div>-->
+				    </div>
+				</div>
+			</div>
+			<!--<div class="app_mt10 app_bgblue"></div>-->
+		</div>
+		<div class="mui-content app_bgf app_p15 app_mb50" style="padding-top: 15px;">
+			<div class="">每月仅需投资：<span id="app_money">0</span>元</div>
+		</div>
+		<nav class="app-bar app-bar-tab app_nav_bottom app_iconbg3" id="app_index_bottom_nav">
+			<button id="app_invest" type="button" class="mui-btn mui-btn-block onebtn app_cf">马上储备<span id="app_button"></span>资金</button>
+		</nav>
+		<script src="../../../js/component/mui.min.js"></script>
+		<script src="../../../js/component/zepto.min.js"></script>
+		<script src="../../../js/component/iscroll.js"></script>
+		<script src="../../../js/component/mui.pullToRefresh.js"></script>
+		<script src="../../../js/component/GHutils.js"></script>
+		<script src="index-tools-details.js"></script>
+	</body>
+
+</html>

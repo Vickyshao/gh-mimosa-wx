@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>编辑银行卡</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			.app_ullist_title{height: 44px;line-height: 44px;padding-left: 10px;font-size: 12px;color: #8A96A0;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">查看银行卡</h1>
+		</header>
+		<div class="mui-content">
+			<div class="app_ullist_title">
+				身份信息
+			</div>
+			<ul class="mui-table-view">
+				<li id="" class="mui-table-view-cell">
+					<span class="mui-pull-right app_c3" id="app_name"></span>
+					姓名
+				</li>
+				<li id="" class="mui-table-view-cell">
+					<span class="mui-pull-right app_c3" id="app_idNumb"></span>
+					身份证号
+				</li>
+			</ul>
+			<div class="app_ullist_title">
+				银行卡信息
+			</div>
+			<ul class="mui-table-view">
+				<li id="" class="mui-table-view-cell">
+					<span class="mui-pull-right app_c3" id="app_bankName"></span>
+					开户行
+				</li>
+				<li id="" class="mui-table-view-cell">
+					<span class="mui-pull-right app_c3" id="app_bankCardNum"></span>
+					储蓄卡号
+				</li>
+				<li id="" class="mui-table-view-cell">
+					<span class="mui-pull-right app_c3" id="app_userAcc"></span>
+					银行预留手机号
+				</li>
+			</ul>
+			<!--<div class="app_m25">
+				<button id="app_delete" type="button" class="mui-btn mui-btn-primary mui-btn-block">删除</button>
+			</div>-->
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/usermgmt/usermgmt-bankcard-edit.js"></script>
+	</body>
+</html>

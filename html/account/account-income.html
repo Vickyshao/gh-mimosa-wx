@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<title>累计收益</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/mui.picker.min.css" rel="stylesheet">
+		<link href="../../css/gray.css" rel="stylesheet">
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style>
+			.account-income .app_bgred2{background-color: #fe4e36;}
+			.account-income .app_bgblue2{background-color: #4083ff;}
+			.account-income .income_box{ z-index: 2;position: relative;}
+			.account-income .jedatebox .jedaul li.action{background: none;}
+			.account-income .jedatebox .jedaul li.action:before{background: none;content: " ";display: block;position: absolute;width:20px;height: 20px;border-radius: 50%;line-height: 20px;left: 50%;top:50%;margin-left: -11px;margin-top: -11px;background: #1d1d26;opacity:0.3;}
+			.account-income .jedatebox .jedaul li .marks_now:before{background: none;content: "";display: block;position: absolute;width:20px;height: 20px;border-radius: 50%;background: #1d1d26;opacity:0.3;color: #fff;line-height:19px;left: 50%;top:50%;margin-left: -10px;margin-top: -10px;}
+			.account-income .jedatebox .jedaul li .mark_box{width:100%;position: absolute;bottom: 1px;left: 0;height: 5px;line-height: 0;}
+			.account-income .jedatebox .jedaul li .marks_t0{width: 5px;height: 5px;background: #4083ff;-webkit-border-radius: 50%;border-radius: 50%;margin: 0 1px;display: inline-block;}
+			.account-income .jedatebox .jedaul li .marks_tn{width: 5px;height: 5px;background: #f07b44;-webkit-border-radius: 50%;border-radius: 50%;margin: 0 1px;display: inline-block;}
+			.app_box_title{margin-left: 20px; margin-right: 10px;}
+			.app_top_box{background-image: url(../../images/public_bg.png);}
+		</style>
+	</head>
+
+	<body class="account-income">
+		<header class="mui-bar mui-bar-nav app_header app_nbborder app_mui_bar ">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">累计收益</h1>
+		</header>
+		<div class="mui-content income_box ">
+			<div class="app_p20 mui-text-center app_bgf app_top_box">
+				<div class="app_f14 app_cf80 app_mt15"><span id="app_totalInt" class="app_f40">0.00</span>元</div>
+				<div class="app_f14 app_mt15">我的总收益</div>
+				<div class="app_f14 app_mt15 confirm">收益确认日：<span id="app_confirmDate"></span></div>
+			</div>
+			<div class="app_box app_mt10">
+				<div class="app_box_title app_clearfix app_pt0">
+					<div>
+						<span class="mui-pull-left">收益记录</span>
+						<span class="app_icon app_icon_list mui-pull-right app_title_icon" id="app_title_change" data-show="list"></span>
+						<div class="app_date_title" id="app_date_title" data-defdate="">
+							<span class="app_f14" id="app_date_title_txt"></span>
+							<span class="mui-icon mui-icon-arrowdown app_f20"></span>
+						</div>
+					</div>
+				</div>
+				<div class="app_box_con app_box_tab_con" id="app_box_calendar">
+					<div class="app_calendar_box" id="calendar">
+						<input class="datainp app_none" id="app_calendar_box" type="text" placeholder="请选择" readonly>
+					</div>
+					<div class="app_box_lenged">
+						<span class="app_ml30">
+												<span class="app_icon_point app_bgred2"></span> 沪深一号收益
+						</span>
+						<!--<span class="app_ml30">
+												<span class="app_icon_point app_bgblue"></span> 定期收益
+						</span>-->
+					</div>
+					<div class="app_bgf app_p20 app_f15">
+						<div class="">沪深一号收益<span class="app_cred" id="app_xinIncome"></span>元</div>
+						<!--<div class=" app_mt15">定期 收益<span class="app_cred" id="app_dqIncome"></span>元</div>-->
+					</div>
+				</div>
+				<div class="app_box_con app_box_tab_con app_none" id="app_box_list">
+					<ul class="app_box_hislist" id="app_income_list">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/echarts.simple.min.js"></script>
+		<script src="../../js/component/jedate.js"></script>
+		<script src="../../js/component/mui.picker.min.js"></script>
+		<script src="../../js/account/account-income.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的活期详情</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-001 **/
+		</style>
+		<style type="text/css">
+			.app_block_border{border-right-color: #ffc800 !important;}
+			.app_top_box{background: url(../../images/bg_t0.png);background-size: 100% 100%;}
+    	</style>
+	</head>
+
+	<body class="account-t0-detail">
+		<header class="mui-bar mui-bar-nav app_header app_bgtop2 app_cf">
+		 	<span class="mui-icon app_icon app_icon_share mui-pull-right app_none" id="share_btn"></span>
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">&nbsp;</h1>
+		</header>
+		<div class="mui-content">
+			<div class="app_top_box app_pb20 app_pt20">
+		    	<ul class="mui-table-view mui-grid-view app_bgn app_np" style="overflow: hidden;">
+					<li class="mui-table-view-cell mui-col-xs-12 app_lhno app_act_box">
+						<div class="app_act_logined">
+							<div class="app-totalValue-box">
+									<div class="app_f40">
+										<span id="app_ratio">--</span>
+									</div>
+								<div class="app_mt5 app_f14 app_mycolor">历史年化收益</div>
+								</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt20 app_pt0 app_pr app_block_border">
+						<div class="app_f12 app_mycolor">昨日收益(元)</div>
+						<div class="app_mt5 app_f16" id="app_yesterdayIncome">--</div>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt20 app_pt0 app_block_border">
+						<div class="app_f12 app_mycolor"><span class="app_pr">累计收益(元)</span></div>
+						<div class="app_mt5 app_f16" id="app_totalIncome">--</div>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt20 app_pt0">
+						<div class="app_f12 app_mycolor"><span class="app_pr">持有天数(天)</span></div>
+						<div class="app_mt5 app_f16" id="app_holdDays">--</div>
+					</li>
+				</ul>
+			</div>
+			<div class="app_bgf mui-text-center app_pt10 app_pb10 app_none">距离下次加息还剩<span class="app_cred" id="app_rewardNestDays">--</span>天</div>
+			
+			<ul class="mui-table-view app_mt15 app_mb81">
+				<li class="mui-table-view-cell">
+					<a href="javascript:;"  class="">
+						在投金额<span class="mui-badge mui-badge-inverted app_c3"><span id="app_value">--</span>元</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="javascript:;"  class="">
+						购买时间<span class="mui-badge mui-badge-inverted app_c3" id="app_orderTime">0000-00-00 00:00:00</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="javascript:;"  class="">
+						投资福利<span class="mui-badge mui-badge-inverted app_c3">加息<span id="app_rewardIncomeRatio">--</span>%</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/echarts.simple.min.js"></script>
+		<script src="../../js/account/account-product-t0-holding-details.js"></script>
+	</body>
+
+</html>

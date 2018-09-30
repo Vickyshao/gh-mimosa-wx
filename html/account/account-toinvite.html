@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>邀请好友</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-001 **/
+			body { background:  #fff;}
+			.app_cgray2{color: #656b79;}
+			.app_cgray3{color: #8A96A0;}
+			.app_bgf{background-color: #fff;}
+			.app_lh30{line-height: 30px;}
+			.copy_btn{padding: 2px 4px;font-size: 12px;}
+			.share_dialog{height: auto;left: 0px;width: 100%;top: auto;}
+			.app_txt{
+				position: absolute;z-index: 111;right: 15px;bottom: 10px;color: #ffad2b;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav app_header  ">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">邀请好友</h1>
+			<span class="mui-pull-right app_txt" id="myinvite">我的邀请</span>
+		</header>
+		<div class="mui-content app_bgf  ">
+			<div class="app_mt20 text-align-center app_f18">
+				<div class="app_cgray2 app_p20">
+					邀请好友加入沪深理财
+				</div>
+				<!--<div class="app_c3 app_mt20">
+					<span class="app_f36"><span id="amount">0</span>元红包</span>
+				</div> -->
+			</div>
+			<div class="app_p30">
+				<img src="../../images/invite-img.png" alt="" style="width: 100%;" />
+			</div>
+			<div class="mui-text-center">
+				我的邀请码: <span id="sceneid" class="app_cmain"></span>
+			</div>
+			<div class="app_pl20 app_pr20 app_cgray3 ">
+				<span class="app_c26" id="app_inviteRuleTitle">&nbsp;</span>
+				<ul class="app_mt10 app_lh24" id="app_inviteRule">
+					
+				</ul>
+			</div>
+			<div class="app_p20">
+				<!--<button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="share_btn" >立即邀请</button>-->
+				<input type="text" value="" id="link" style="position: absolute; left: -10000px;" readonly="readonly">
+				<!--<button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="copyBtn" onClick="Copy($('#link').val())">复制链接</button>-->
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="copyBtn"  data-clipboard-action="copy" data-clipboard-target="#link">复制链接</button>
+			</div>
+		</div>
+		<div class="app_dialog app_none" id="share_list">
+			<div class="app_dialog_box app_bank_list app_slider_up padding_less share_dialog">
+				<header class="ui-dialog-hd share_head">
+					<h3 class="app_f16 app_pt10 app_pb10 text-align-left">分享到</h3>
+				</header>
+				<div class="share_box_member" id="app_wxfriend">
+					<span class="app_icon app_icon_wxfriend"></span>
+					<span>微信好友</span>
+				</div>
+				<div class="share_box_member" id="app_wxfriendaround">
+					<span class="app_icon app_icon_friendaround"></span>
+					<span>朋友圈</span>
+				</div>
+				<!--<div class="share_box_member" id="app_qq">
+					<span class="app_icon app_icon_QQ"></span>
+					<span>QQ好友</span>
+				</div>-->
+				<!--<div class="share_box_member" id="app_sina">
+					<span class="app_icon app_icon_sina"></span>
+					<span>新浪微博</span>
+				</div>-->
+				<div class="close_share app_icon_close app_f16">
+					取消
+				</div>
+			</div>
+		</div>
+		<!--<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>-->
+		<script src="../../js/account/clipboard.min.js"></script>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/share.js"></script>
+		<script src="../../js/account/account-toinvite.js"></script>
+		<script>
+		   var _url = "https://www.hushenlc.cn/mimosah5/share/register.html";
+		    if (_url.indexOf('?')) {
+				var link = _url + "?inviteCode=" + GHUTILS.getLocalUserInfo('sceneid');
+			} else {
+				var link = _url + "&inviteCode=" + GHUTILS.getLocalUserInfo('sceneid');
+			}
+		    $('#link').val(link);
+		    
+			var clipboard = new Clipboard('#copyBtn');
+			$("#datePicker2").focus(function(){
+			    document.activeElement.blur();
+			});
+
+		    clipboard.on('success', function(e) {
+		        alert("复制成功, 去粘贴");
+		    });
+		
+		    clipboard.on('error', function(e) {
+		    	$('#link').off().on("click focus",function(){
+		    		document.activeElement.blur();
+					$(this).focus().select();
+					this.SelStart = 0;
+					this.SelLength = LEN((this.Value));
+					this.SetFocus;
+				});
+		    	$('#link').removeAttr("style");
+		    	alert('此功能不支持该浏览器，请手工复制文本框中内容');
+		    });
+		</script>
+	</body>
+</html>

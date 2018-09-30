@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>活期产品列表</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.chart {
+				height: 80px;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.app_c8{color: #888888;}
+    		.app_c2{color: #222222;}
+    		.app_c9{color:#999}
+    		.app_cf4{color:#F4551F;}
+    		.app_tag_icon{position: absolute;}
+    		.product_box{min-height:450px;background: #f65205;padding: 57px 20px 20px 20px;text-align: center;color: #fff;}
+	   		.product_box .app_title{font-size: 18px;}
+	   		.product_box .app_fpink{color: #ffc2a5;}
+	   		.app_center{margin:60px auto;}
+	   		.red_bg{background: linear-gradient( #ff712e 0%, #ff712e 99%);position: relative;}
+	   		.bubble{position: absolute;top: -18px;right: -2px;width: 45px;height: 18px;font-size: 12px;color: #f65205;line-height: 16px;background: url(../../images/kuang.png);background-size: 100%;background-repeat: no-repeat;}
+	   		button.mui-btn.onebtn.app_btn_left{width: 50%;float: left;border-radius: 0;color: #f65205;}
+	   		button.mui-btn.onebtn.app_btn_right{width: 50%;float: right;border-radius: 0;background: #f65205;}
+	   		.app_f73{font-size: 73px;}
+	   		.app_f60{font-size: 60px;}
+	   		.app_f26{font-size: 26px;}
+	   		.app_mt60{margin-top: 60px;}
+	   		
+	   		.app_product_ihbox{margin: 5px 0;border-radius: 0;border: 1px solid #e5e5e5;background: #fff;padding: 0 12px;position: relative;}
+			
+			.app_product_ihbox_title{border-bottom: none;padding-bottom: 0;}
+    		.app_product_ihcon{border-bottom: 1px solid #EFECE8;}
+    		.app_product_icon{background: #ff8c4c;width: 60px;height: 22px;color: #fff;position: absolute;right: 10px;top: 0;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;font-size: 12px;text-align: center;line-height: 22px;}
+    		.sold_out .app_product_icon{background: #d1d1d1;}
+    	</style>
+	</head>
+	<body>
+		<!--<header class="mui-bar mui-bar-nav app_header app_cf app_bgtop2 app_bb0 app_header0">
+			<span class="mui-icon app_icon app_icon_share mui-pull-right app_none" id="share_btn"></span>
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title app_cf"></h1>
+		</header>-->
+		<div class="mui-content app_mt10">
+			<div class="mui-scroll-wrapper app_b50" id="app_pullRefresh">
+				<div class="mui-scroll">
+					<div class="app_product_list">
+						
+
+					</div>
+				
+				
+					<!--<ul class="mui-table-view  app_mt20 app_mb81" id="app_list">
+						
+					</ul>-->
+		
+				</div>
+				<div id="app_list_tips" class="app_mt60 text-align-center app_w30p app_center app_ca6 app_none"><img style="width:100%" src="../../images/app-nodata2.png"/>暂无产品</div>
+			</div>
+		</div>
+		<nav class="app-bar app-bar-tab app_nav_bottom">
+			<a class="app-tab-item app_links" href="javascript:;" data-url="../../html/index/index.html" id="app_homepage">
+				<span class="mui-icon app_icon app_icon_home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="app-tab-item app_links app-active"  href="javascript:;" data-url="../../html/product-t0/product-t0-list.html" id="app_productlist">
+				<span class="mui-icon app_icon app_icon_t0"></span>
+				<span class="mui-tab-label">活期</span>
+			</a>
+			<a class="app-tab-item app_links"  href="javascript:;" data-url="../../html/product-tn/product-tn-list.html" id="app_productlist">
+				<span class="mui-icon app_icon app_icon_tn"></span>
+				<span class="mui-tab-label">定期</span>
+			</a>
+			<a class="app-tab-item app_links"  href="javascript:;" data-url="../../html/account/account.html" data-checklogin="true" id="app_account">
+				<span class="mui-icon app_icon app_icon_my"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/echarts.simple.min.js"></script>
+		<!--<script src="../../js/component/share.js"></script>-->
+		<script src="../../js/product-t0/product-t0-list.js"></script>
+	</body>
+</html>

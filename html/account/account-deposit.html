@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>充值</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style>
+			.app_lh44{line-height: 44px;}
+			.app_with_yuan{position: relative;}
+			.app_with_yuan .app_yuan {right: 20px;font-size: 18px;width: 10px;bottom: 15px;position: absolute;margin-top: 30px;}
+			.app_with_yuan input{padding-left: 45px;}
+			.mui-input-row label{padding-bottom: 0;}
+			.app_with_yuan .app_yuan_tip {left: 16px;font-size: 24px;bottom: 13px;width: 10px;position: absolute;}			
+		</style>
+	</head>
+
+	<body class="account-deposit">
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">充值</h1>
+		</header>
+		
+		<div class="mui-content ">
+			<ul class="mui-table-view app_mt10 app_paycard">
+				<li class="mui-table-view-cell">
+					<a class="">
+						<img id="app_bankimg" src="" alt="" class="mui-media-object mui-pull-left"/>
+						<div class="mui-media-body app_mt10"><span id="app_bankName"></span>
+							(<span id="app_bankCardNum" class="app_c3b"></span>)
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="text-align-right">
+				<p class="mui-ellipsis mui-h6 app_lh44 app_c8b app_pr20">本卡本次可支付: <span id="app_bankLimit" class="app_c3b">0.00</span></p>
+			</div>
+			<div id="app_stepOne" class="">
+				<div class="mui-input-group">
+					<div class="mui-input-row app_nobborder" id="app_deposit_div">
+						<label>充值金额</label>
+						<div class="app_with_yuan">
+							<span class="app_yuan_tip">￥</span>
+							<input class="" type="tel" name="" id="app_money" value="" placeholder="请输入金额" valid='{"required":true,"msg":"充值金额不能为空","tipsbox":"#app_tips_box1"}' maxlength="12" oninput="GHUTILS.checkInput(this,3)" />
+							<span class="app_yuan">元</span>
+						</div>
+					</div>
+				</div>
+				<div class="mui-input-group app_mt20">
+					<div class="mui-input-row">
+						<label>支付密码</label>
+						<input type="password" id="app_dealpwd" class="mui-input-password" placeholder="请输入支付密码" valid='{"required":true,"msg":"支付密码不能为空","tipsbox":"#app_tips_box1","subvalid":[{"finalLength":"6","msg":"支付密码输入错误"},{"passWord":true,"msg":"密码中不允许有空格"}]}' maxlength="6" oninput="GHUTILS.checkInput(this,1)"/>
+						<span class="mui-icon mui-icon-eye app_icon app-icon-eye"></span>
+					</div>
+				</div>
+				<div class="app_cred app_tips_txt app_ml15" id="app_tips_box1">&nbsp;</div>
+				<div class="app_ml20 app_mr20">
+					<button id="app_getRechargeFrom" type="button" class="mui-btn mui-btn-primary mui-btn-block" disabled="disabled">立即充值</button>
+				</div>
+				<!--<div class="app_pl20 app_pr20 app_pt20 mui-text-center">
+					<label>
+						<span class="app_icon app_icon_checked app_f14"><input type="checkbox" checked="true" id="app_confirm"/></span> 本人已阅读
+					</label>
+					<a id="app-recharge" class="app_cmain" data-title="充值代扣委托书">《充值代扣委托书》</a>
+				</div>-->
+				<div class="app_p20 app_content_txt ">
+					<p>账户充值为实时到账，且不收取手续费</p>
+					<p>充值金额不可低于2元</p>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="../../js/component/mui-deposit.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/bank.js"></script>
+		<script src="../../js/account/account-deposit.js"></script>
+	</body>
+
+</html>

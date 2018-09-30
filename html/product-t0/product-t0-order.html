@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>活期产品转入</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.mui-input-row label.app_list_labelbox{width: 100%;position: relative;z-index: 2;}
+    		.app_pt0{padding-top:0 !important;}
+    		.app_pb0{padding-bottom:0 !important;}
+    		.app_pb5{padding-bottom: 5px !important;}
+    		.app_pl15{padding-left:15px !important;}
+    		.mui-badge.mui-badge-inverted{right: 5px;}
+			.app_with_yuan .app_yuan {right: 20px;font-size: 18px;width: 10px;top: 22px;}
+			.app_with_yuan input{padding-left: 40px;}
+			.app_with_yuan .app_yuan_tip {left: 6px;font-size: 34px;top: 15px;width: 10px;}
+    		.app_tips_txt.app_pl5{padding-left: 5px;}
+    		.app_tips_txt{height: 44px;}
+    		.app_lh35{line-height: 35px !important;}
+    		.mui-input-group:before{height: 0;}
+    		.app_bte{border-top: 1px solid #eee;}
+    		.app_w42p{width: 42% !important;}
+    		.app_w58p{width: 58% !important;}
+    		.mui-input-row label{padding-left: 10px;}
+    		.mui-table-view-cell.mui-collapse .mui-table-view .mui-table-view-cell{padding-left: 20px;}
+    		.mui-table-view-chevron .mui-table-view-cell>a:not(.mui-btn){margin-right: -15px;}
+    		.mui-table-view-cell>a:not(.mui-btn).mui-active{background: #fff;padding-left: 15px;}
+    		.mui-table-view-cell.mui-collapse.mui-active .mui-table-view-cell>a:not(.mui-btn).mui-active{padding-left: 36px;}
+    		.app_ml17{margin-left: 17px;}
+    		#app_profit[disabled]{color: red;opacity: 1;}
+    		.mui-badge.mui-badge-inverted{color: #3b3b3b;}
+    	</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header app_header0">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 class="mui-title">购买</h1>
+		</header>
+		<div class="mui-content app_mui_content0">
+			<ul class="mui-table-view app_f16 small_size app_mt10">
+				<li class="mui-table-view-cell ">
+					<a class="mui-active">
+						起投金额:
+						<div class="mui-badge mui-badge-inverted text-align-right" id="app_Money">
+							--
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell ">
+					<a class="">
+						计息方式:
+						<div class="mui-badge mui-badge-inverted text-align-right" id="app_interestsFirstDays">
+							&nbsp;
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell ">
+					<a class="">
+						锁定期限:
+						<div class="mui-badge mui-badge-inverted text-align-right" id="app_lockPeriodDays">
+							&nbsp;
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell ">
+					<a class="">
+						历史年化收益:
+						<div class="mui-badge mui-badge-inverted text-align-right">
+							6.5%
+						</div>
+					</a>
+				</li>
+			</ul>
+			
+			<div class="mui-input-group app_mt10">
+				<div class="mui-input-row app_nobborder app_with_yuan app_ml5">
+					<label class="app_w42p">购买金额</label>
+					<input class="app_w58p" type="text" name="" id="app_investMoney" value="" placeholder="输入金额" maxlength="9" oninput="GHUTILS.checkInput(this,3)"/>
+					<span class="app_yuan app_box_suffix">元</span>
+				</div>
+				<div class="mui-input-row app_with_yuan app_ml5">
+					<label class="app_w42p">预计每日收益</label>
+					<input class="app_w58p app_cmain" type="text" name="" id="app_profit" value="" disabled="disabled" placeholder="输入购买金额后自动计算" />
+				</div>
+			</div>
+			<p class="app_pl20 app_pr20 app_pt10 app_f12">建议至少投资<span class="app_cmain">58</span>元以上，才会有每日收益哦</p>
+			<ul class="mui-table-view app_f16 small_size app_mt10" id="app_balanceDiv">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						可用余额:<span id="app_availableBalance">0.00</span>元
+						<div class="mui-badge mui-badge-inverted text-align-right app_cmain" id="app_goDeposit_div">
+							
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view app_mt10 app_pl5" id="app_chooseCoupon">
+                <li class="mui-table-view-cell">
+                    <span id="app_maxyield" class="mui-badge mui-badge-inverted app_mr20">&nbsp;</span>
+                    <a class="mui-navigate-right app_link_pages">使用优惠：<span id="app_discount">无</span></a>
+                </li>
+            </ul>
+            <div class="app_pl20 app_pr20 app_pt10 app_none" id="app_checkCoupon">
+                <label class="app_fl">
+                    <span class="app_icon app_icon_checked app_f14 app_aggrementSpan"><input type="checkbox" checked="true" id="app_couponCkeck"/></span> 
+                </label>
+                <div class="app_ml20">
+                    <span>不使用优惠</span>
+                </div>
+            </div>
+			<div class="app-content-padded app_clearfix app_pr15">
+				<span id="app_tips_box" class="app_tips_txt app_ml20 app_cred">&nbsp;</span>
+			</div>
+			<div class="app_pl20 app_pr20">
+				<label class="">
+					<span class="app_icon app_icon_checked app_f14 app_aggrementSpan"><input type="checkbox" checked="true" id="app_aggrement"/></span>
+				</label>
+				<div class="app_c3b app_inline">
+					<span>我已同意</span>
+					<a href="javascript:;" class="app_cmain" app_txt_id="3" id="app_serviceFiles">《风险揭示书》</a>和
+					<a href="javascript:;" class="app_cmain" app_txt_id="3" id="app_investFiles">《定向委托投资管理协议》</a>
+				</div>
+			</div>
+			<div class="app_ml20 app_mr20 app_mt10">
+				<button id="app_confirm" type="button" class="mui-btn mui-btn-primary mui-btn-block" disabled="disabled">确认支付</button>
+			</div>
+		</div>
+		
+		<div class="app_dialog_warp" id="app_dialog_warp">
+         	<div class="app_dialog_box app_dialog_ticket_list">
+         		<div class="app_dialog_title mui-text-center">
+         			<div class="app_close_box"><span class="mui-icon mui-icon-close mui-pull-right app_close"></span></div>优惠券
+         		</div>
+         		<div class="app_dialog_con app_dialog_list_box">
+         			
+         		</div>
+         	</div>
+        </div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/product-t0/product-t0-order.js"></script>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的银行卡</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			.app_c84{color:#848484}
+			.app_bank_list_owned{border-radius:10px;height:110px;margin: 10px;position: relative;color: #FFFFFF;}
+			.app_bank_list_red{background-image:linear-gradient(-126deg, #e75b65 0%, #e9517d 99%);}
+			.app_bank_list_blue{background-image:linear-gradient(-126deg, #4f83be 0%, #3c5ea9 99%);}
+			.app_bank_list_add{border:1px dashed #c1c1c1;border-radius:10px;height:110px;margin: 10px;}
+			.app_bank_list_icondiv{width: 45px;height: 45px;margin: 10px;position: absolute;background:#ffffff;border-radius:100%;}
+			.app_bank_list_icon{width: 31px;height: 31px;margin: 7px;}
+			.app_bank_list_detaildiv{position: absolute;left: 65px;top: 15px;}
+			.app_bank_list_add_crossdiv{height: 27px;width: 27px;margin: auto;margin-top: 27px;}
+			.app_bank_list_add_detaildiv{height: 50%;text-align: center;}
+			.app_w27{width: 27px;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">我的银行卡</h1>
+		</header>
+		<div class="mui-content">
+			<div id="app_banklist">
+				
+			</div>
+			<!--<div class="app_bank_list_owned app_bank_list_red">
+				<div class="app_bank_list_icondiv">
+					<div class="app_bank_list_icon">
+						<img src="../../images/bankicon_ICBC.png" class="app_w100p">
+					</div>
+				</div>
+				<div class="app_bank_list_detaildiv">
+					<div>中国工商银行</div>
+					<div class="app_f10">单笔可支付50000元</div>
+					<div class="app_mt10">**** ***** ***** *** 6789</div>
+				</div>
+			</div>
+			<div class="app_bank_list_owned app_bank_list_blue">
+				<div class="app_bank_list_icondiv">
+					<div class="app_bank_list_icon">
+						<img src="../../images/bankicon_CCB.png" class="app_w100p">
+					</div>
+				</div>
+				<div class="app_bank_list_detaildiv">
+					<div>建设银行</div>
+					<div class="app_f10">单笔可支付100000元</div>
+					<div class="app_mt10">**** ***** ***** *** 8971</div>
+				</div>
+			</div>-->
+			<div class="app_bank_list_add app_none">
+				<div class="app_bank_list_add_crossdiv">
+					<img src="../../images/app-cross.png" class="app_w27" />
+				</div>
+				<div class="app_c84 app_pt10 app_bank_list_add_detaildiv">
+					添加银行卡
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/bank.js"></script>
+		<script src="../../js/usermgmt/usermgmt-bankcard-list.js"></script>
+	</body>
+</html>

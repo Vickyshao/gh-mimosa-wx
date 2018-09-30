@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的邀请</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-001 **/
+		</style>
+		<style type="text/css">
+			.app_block_border{
+				border-right:1px solid rgba(255,255,255,0.5);
+			}
+			.app_fc6{
+				color:#666 !important;
+			}
+			.app_txt{
+				height:44px;line-height:44px;color: #ffad2b;width: 20%;position: relative;z-index: 2;text-align: right;
+			}
+			.app_notbac{background: none !important;}
+			.app_mt0{margin-top: 0 !important;}
+			.app_invite_title{color: #8a96a0 !important;}
+			.app_invitetop_box{background-image: url(../../images/public_bg.png);}
+			.app_invitetop_box .app_np{padding: 20px 0 30px 0 !important;}
+			.app_t220{top: 170px !important;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">我的邀请</h1>
+			<span class="mui-pull-right app_txt app_links" id="charts" data-url="../../html/account/account-invite-charts" data-checklogin='true'>排行榜</span>
+		</header>
+		<div class="mui-content  ">
+			
+			<div class="app_top_box app_invitetop_box">
+						<ul class="mui-table-view mui-grid-view app_bgn app_np" style="overflow: hidden;">
+							<li class="mui-table-view-cell mui-col-xs-12 app_mt20 app_pt0">
+								<div class="app_mt5 app_f30" id="account">0</div>
+								<div class="app_f12 app_cf80 app_mt10">累计邀请(人)</div>
+							</li>
+						</ul>
+
+				</div>
+			<div class="mui-scroll-wrapper app_t220" id="app_pullRefresh" style="top: 190px !important;">
+				<div class="mui-scroll">
+					<!--这里放置真实显示的DOM内容-->
+					<div id="invitePeople" class="app_none">
+						<ul class="mui-table-view mui-grid-view app_pn app_list_title app_notbac app_mt0 app_invite_title">
+							 <li class="mui-table-view-cell mui-media mui-col-xs-5 mui-text-left">
+								 <div class="mui-h4">我邀请的人</div>
+							 </li>
+							 <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-text-left">
+								<div class="mui-h4">姓名</div>
+							 </li>
+							 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-text-left">
+								<div class="mui-h4">注册时间</div>
+							 </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/account/account-invitation.js"></script>
+	</body>
+
+</html>

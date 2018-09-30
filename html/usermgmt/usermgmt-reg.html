@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>注册</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">
+    		html, body{height: 100%;}
+    		.mui-content{position: relative;min-height: 100%;}
+    		body{padding-bottom:100px;}
+    		.app_pa_bottom{bottom:-100px;}
+    		
+    		.app_input_group .mui-input-row .mui-btn.app_btn_line{border-left: none;}
+    		.app_input_group .mui-input-row label{width: 10%;}
+    		.app_input_group .mui-input-row label~input{width: 89%;}
+    		body,html,.mui-content{background-color: #fff;}
+    		
+    		.time{position: absolute;right: 0;top: 2px;}
+	    	.circle {
+				width: 32px;
+				height: 32px;  
+				position: absolute;
+				right: 0;
+				top: -3px;
+				border-radius: 50%;
+				background: #E45038;
+			}
+			.pie_left, .pie_right {
+				width: 32px; 
+				height: 32px;
+				position: absolute;
+				top: 0;left: 0;
+			}
+			.left, .right {
+				display: block;
+				width:32px; 
+				height:32px;
+				background:#DFDFDF;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.pie_right, .right {
+				clip:rect(0,auto,auto,16px);
+			}
+			.pie_left, .left {
+				clip:rect(0,16px,auto,0);
+			}
+			.mask {
+				width: 22px;
+				height: 22px;
+				border-radius: 50%;
+				left: 5px;
+				top: 5px;
+				background: #FFF;
+				position: absolute;
+				text-align: center;
+				line-height: 22px;
+				font-size: 12px;
+				color: #E45038;
+				text-align: center;}
+			.app_input_group .mui-input-row .mui-btn{padding: 0;line-height: 25px;}
+    	</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header app_nbborder">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">注册</h1>
+		</header>
+		<div class="mui-content">
+			<div class="steps" id="app-stepOne">
+				<form class="mui-input-group app_input_group app_mt15" id="app-regForm">
+					<div class="mui-input-row" id="app-phoneDiv">
+						<label><span class="app_icon app_icon_phone app_cmain"></span></label>
+						<input id="app-phoneNo" type="tel" class="mui-input-clear" placeholder="手机号码" valid='{"required":true,"msg":"手机号码不能为空","tipsbox":"#app_tips_reg","subvalid":[{"mobilePhone":true, "msg":"请输入正确格式的手机号码"}]}' maxlength="11" oninput="GHUTILS.checkInput(this,0)"/>
+					</div>
+					<div class="mui-input-row">
+						<label><span class="app_icon app_icon_code app_cmain"></span></label>
+						<!--<a href="javascript:;" id="app-message" class="mui-btn app_btn_line">获取验证码</a>-->
+						<div class="time mui-btn app_btn_line" id="app-message">
+							<div class="my_tips">获取验证码</div>
+							<div class="circle app_none">
+								<div class="pie_left"><div class="left"></div></div>
+								<div class="pie_right"><div class="right"></div></div>
+								<div class="mask"><span class="app_f12" id="my_time">&nbsp;</span></div>
+							</div>
+						</div>
+						<input id="app-vericode" type="tel" class="app_vcode_input" placeholder="输入短信验证码" valid='{"required":true,"msg":"验证码不能为空","tipsbox":"#app_tips_reg","subvalid":[{"positiveInteger":true,"msg":"验证码输入错误","minLength":6}]}' maxlength="6" oninput="GHUTILS.checkInput(this,5)"/>
+						
+					</div>
+					<div class="mui-input-row">
+						<label><span class="app_icon app_icon_locked app_cmain"></span></label>
+						<input type="password" class="mui-input-password" placeholder="设置登录密码(6-16位数字、字母)" id="app_pwd" valid='{"required":true,"msg":"登录密码不能为空","tipsbox":"#app_tips_reg","subvalid":[{"between":[6,16],"msg":"密码长度在6-16位之间"},{"passWord":true,"msg":"密码中不允许有空格"}]}' maxlength="16" oninput="GHUTILS.checkInput(this,1)"/>
+					</div>
+					<div class="mui-input-row">
+						<label><span class="app_icon app_icon_locked app_cmain"></span></label>
+						<input type="password" class="mui-input-password" placeholder="再次确认密码" id="app_pwdConf" valid='{"required":true,"msg":"确认密码不能为空","tipsbox":"#app_tips_reg","subvalid":[{"equals":"app_pwd","msg":"两次输入密码不一致"}]}' maxlength="16" oninput="GHUTILS.checkInput(this,1)"/>
+					</div>
+					<div class="mui-input-row">
+						<label><span class="app_icon app_icon_inviteCode app_cmain"></span></label>
+						<input type="tel" class="mui-input-clear" placeholder="邀请码(非必填)" id="app_inviteCode" valid='{"required":false,"tipsbox":"#app_tips_reg"}' maxlength="10" oninput="GHUTILS.checkInput(this,2)"/>
+					</div>
+				</form>
+				<div class="app_pl25 app_pr25 app_mt20">
+					<label>
+						<span class="app_icon app_icon_checked app_f14"><input type="checkbox" checked="true" id="app_aggrement"/></span> 我已阅读并同意
+					</label>
+					<a class="app_cmain" app_txt_id="3" id="app_person" data-title='沪深理财平台服务协议'>《沪深理财平台服务协议》</a>
+				</div>
+				<div class="app_cred app_pl20 app_tips_txt" id="app_tips_reg">&nbsp;</div>
+				<div class="app_ml25 app_mr25">
+					<button id="app-stepOneNext" type="button" class="mui-btn mui-btn-primary mui-btn-block" disabled="disabled">注册</button>
+				</div>
+				<!--<div class="app_mb20 mui-text-center app_pa_bottom">
+					<a id="app_login" class="app_f18 app_cred3">已有账号，直接登录</a>
+				</div>-->
+			</div>
+
+			<div class="steps app_none" id="app-stepTwo">
+				<div class="app_pt50 app_pb15 mui-text-center">
+					<span class="mui-icon app_icon app_icon_checkmarkempty app_f80 app_cgreen"></span>
+					<p class="mui-h4 app_c3 app_pt20 app_f24">注册成功！</p>
+				</div>
+				<div class="app-content-padded app_reg_btn_box app_m20 app_pt20">
+					<button id="" class="mui-btn mui-btn-primary mui-btn-block app_account">
+						立即查看
+					</button>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/usermgmt/usermgmt-reg.js"></script>
+	</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>优惠券</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-001 **/
+		</style>
+		<style type="text/css">
+   			.mui-fullscreen .mui-slider-group.app_sp_top { top: 44px;}
+   			.mui-ellipsis-2{line-height: 20px;}
+   			.app_bts{border-top: 1px dotted #bebebe;}
+   			.app_lh35{line-height: 35px;}
+   			.app_coupon_num_box{padding: 5px;text-align: center;}
+   			.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item{border-top: 0;}
+   			@media only screen and (min-width: 100px) and (max-width: 355px) {
+   				.app_user_coupon_box{margin-left: 5px;margin-right: 5px;}
+   				.app_coupon_num_box{width: 86px;height: 110px;}
+   				.app_coupon_info {left: 86px;font-size: 12px;}
+   				.app_coupon_info h5{font-size: 12px;}
+   				.app_coupon_info .app_bottom {
+				    height: 30px;
+				    line-height: 30px;
+				}
+				.app_coupon_info .app_mt10{margin-top: 4px;}
+   				.app_coupon_num_box .app_coupon_num{font-size: 24px;}
+   				.app_coupon_num_box .app_mb30{margin-bottom: 15px;}
+   			}
+   			@media only screen and (min-width: 100px) and (max-width: 408px) {
+   				.app_user_coupon_box{margin-left: 5px;margin-right: 5px;}
+   				.app_coupon_num_box{width: 86px;}
+   				.app_coupon_info {left: 86px;}
+   				.app_coupon_num_box .app_coupon_num{font-size: 24px;}
+   			}
+   			
+   			.app_coupon_list{height: 143px;position: relative;}
+			.coupon_receive_btn{position:absolute;top: 0;bottom: 30px;right: 0;left: 0;margin: auto;width: 80px;height: 80px;text-align: center;line-height: 80px;border-radius: 50%;color: #fff;}
+			.app_coupon_list .app_bottom{position: absolute;bottom: 10px;text-align: center;width: 100%;}
+			
+			.app_user_coupon_box.on .coupon_receive_btn{background: #FF7F1A;}
+			.app_user_coupon_box.used .coupon_receive_btn{background: #666;}
+			.app_user_coupon_box.off .coupon_receive_btn{background: #999;}
+			.tasteCoupon_btn:active{box-shadow: 0px 0px 5px #FF7F1A inset;}
+			.tasteCoupon_btn{position: absolute;top: 5px;right: 5px;padding: 2px 5px;border-radius: 5px;border: 1px solid #FF7F1A;color: #FF7F1A;font-size: 12px;}			
+			.app_user_coupon_box.off .tasteCoupon_btn{display: none;}
+			.app_user_coupon_box.used .tasteCoupon_btn{display: none;}
+			.app_tasteTitle{max-width: 70%;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav app_header ">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">优惠券</h1>
+			<!--<a id="app-rule" class="mui-pull-right" style="color: #999; margin-top: 13px;">使用规则</a>-->
+		</header>
+		<div class="mui-content ">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted app_bgf app_np">
+					<a class="mui-control-item mui-control-item1 mui-active app_bb0 app_bre" href="#app-canuse">可使用<span id="app-notUsed-num">(0)</span></a>
+					<a class="mui-control-item mui-control-item1 app_bb0 app_bre" href="#app-used">已使用<span id="app-used-num">(0)</span></a>
+					<a class="mui-control-item mui-control-item1 app_bb0 " href="#app-expired">已过期<span id="app-expired-num">(0)</span></a>
+				</div>
+				<!--<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>-->
+				<div class="mui-slider-group app_sp_top">
+					<div id="app-canuse" class="mui-slider-item mui-control-content mui-active">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div id="app-notUsed-list" class="app_mt10">
+									<!--<div class="app_user_coupon_box on app_clearfix">
+										<div class="app_coupon_num_box">
+											<h5 class="app_cf mui-text-left app_mb30">代金券</h5>
+											<span class="app_f18">￥</span>
+											
+											<span class="app_coupon_num">
+												<span  class="app_fb">3888</span>
+											</span>
+										</div>
+										<div class="app_coupon_info">
+											<div class="ui-border-b app_mt10 mui-ellipsis app_cmain">签到活动---送2元代金券</div>
+											<div class="app_c3b app_mt10 mui-ellipsis">仅限投资月月盈,月月盈,月月盈,月月盈</div>
+											<div class="app_c3b app_mt10 mui-ellipsis">满600元使用</div>
+											<div class="app_c3b app_mt10 app_bts app_bottom">有效期至2017-02-19 23:59:59</div>
+										</div>
+									</div>-->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="app-used" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div id="app-used-list" class="app_mt10"></div> 	
+							</div>
+						</div>
+					</div>
+					<div id="app-expired" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div id="app-expired-list" class="app_mt10"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/account/account-coupon.js"></script>
+	</body>
+</html>

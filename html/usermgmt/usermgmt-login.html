@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		/*html, body{height: 100%;}
+    		#app-userPwd {width: 55% !important;}
+    		#app-forgetpwd {width: 25% !important;}
+    		.mui-icon-eye {right: 26% !important;}*/
+    		.app_h60 {height: 60px;}
+    		.app_hl {width: 50%;float: left;position: relative;}
+    		.app_hr {width: 50%;float: right;position: relative;}
+    		.app_hl_sp {width: 112px;height: 30px;line-height: 30px;position: absolute;top: 15px;right: 0;border: 1px solid #0d84f2;text-align: center;border-top-left-radius: 8px;border-bottom-left-radius: 8px;}
+    		.app_hr_sp {width: 112px;height: 30px;line-height: 30px;position: absolute;top: 15px;left: 0;border: 1px solid #0d84f2;text-align: center;border-top-right-radius: 8px;border-bottom-right-radius: 8px;}
+    		.app_hb_sp {background-color: #0d84f2;color: #fff;}
+    		.app_hw_sp {background-color: #efeff4;color: #0d84f2;}
+    		.mui-content{position: relative;min-height: 100%;}
+    		body{padding-bottom:100px;}
+    		.app_pa_bottom{bottom:-100px;}
+    		
+    		.mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech{top: 12px;}    		
+    		#app_imgCode{width: 64% !important;}
+    		#app_img{width: 25% !important;float: right;}
+    		.app_input_group .mui-input-row label{width: 10%;}
+    		.app_input_group .mui-input-row label~input{width: 89%;}
+    		.app-logo img{width: 40%;}
+    		body,html,.mui-content{background-color: #fff;}
+    	</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header app_nbborder">
+			<span id="app_close" class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left" style="font-size:18px;"></span>
+			<h1 id="app_title" class="mui-title">&nbsp;</h1>
+		</header>
+		<div class="mui-content">
+			<div class="app_bgf mui-text-center app-logo app_pt20 app_pb20">
+				<img src="../../images/login_logo.png" alt="" />
+			</div>
+			<!--<div class="app_h60" id="app_title_buttons">
+				<div class="app_h60 app_hl">
+					<span class="app_hl_sp app_hw_sp" id="app_mobileLogin">
+						手机快捷登录
+					</span>
+				</div>
+				<div class="app_h60 app_hr">
+					<span class="app_hr_sp app_hb_sp" id="app_accountLogin">
+						账号密码登录
+					</span>
+				</div>
+			</div>-->
+			<!--<div class="mui-input-group app_input_group app_none steps" id="app_stepOne">
+				<div class="mui-input-row" id="app-phoneDiv">
+					<label>+86</label>
+					<input id="app-userAcc" type="tel" class="mui-input-clear" value="" placeholder="手机号" valid='{"required":true,"tipsbox":"#app_tips_login","msg":"手机号码不能为空","subvalid":[{"mobilePhone":true,"msg":"请输入正确格式的手机号码"}]}' maxlength="11" oninput="GHUTILS.checkInput(this,0)"/>
+				</div>
+				<div class="mui-input-row">
+					<label>验证码</label>
+					<a href="javascript:;" id="app-message" class="mui-btn app_btn_line">获取验证码</a>
+					<input id="app-vericode" type="tel" class="app_vcode_input" placeholder="请输入短信验证码" valid='{"required":true,"msg":"验证码不能为空","tipsbox":"#app_tips_login","subvalid":[{"positiveInteger":true,"msg":"验证码输入错误","minLength":6}]}' maxlength="6" oninput="GHUTILS.checkInput(this,5)"/>
+				</div>
+			</div>-->
+			
+			<div class="mui-input-group app_input_group steps" id="app_stepTwo">
+				<div class="mui-input-row" id="app_mobileDiv">
+					<label><span class="app_icon app_icon_phone app_cmain"></span></label>
+					<input id="app-userAcc2" type="tel" class="mui-input-clear" value="" placeholder="手机号码" valid='{"required":true,"tipsbox":"#app_tips_login","msg":"手机号码不能为空","subvalid":[{"mobilePhone":true,"msg":"请输入正确格式的手机号码"}]}' maxlength="11" oninput="GHUTILS.checkInput(this,0)"/>
+				</div>
+				<div class="mui-input-row" id="app_pwdDiv">
+					<label><span class="app_icon app_icon_locked app_cmain"></span></label>
+					<!--<a href="javascript:;" id="app-forgetpwd" class="mui-btn app_btn_line">忘记密码</a>-->
+					<input id="app-userPwd" type="password" class="mui-input-password" value="" placeholder="登录密码" valid='{"required":true,"tipsbox":"#app_tips_login","msg":"密码不能为空","subvalid":[{"between":[6,16],"msg":"密码长度在6-16位之间"}]}' maxlength="16" oninput="GHUTILS.checkInput(this,1)"/>
+				</div>
+				<div class="mui-input-row app_none" id="app_imgDiv">
+					<label><span class="mui-icon mui-icon-locked app_cmain"></span></label>
+					<img id="app_img" src="" height="100%" class=""/>
+					<input id="app_imgCode" type="text" class="mui-input-clear" placeholder="图形验证码" valid='{"required":true,"msg":"请输入图形码","subvalid":[{"finalLength":"4","msg":"图形码输入错误"}]}' maxlength="4"/>
+				</div>
+			</div>
+			<div style="text-align: right;padding: 10px 17px 0 17px;">
+				<a href="javascript:;" id="app-forgetpwd" class="">忘记密码?</a>
+			</div>
+			<div class="app_cred app_tips_txt app_ml15" id="app_tips_login">&nbsp;</div>
+			<div class="app_ml25 app_mr25">
+				<button id="app-login" type="button" class="mui-btn mui-btn-primary mui-btn-block" disabled="disabled">登录</button>
+			</div>
+			<div class="app_mt30 mui-text-center">
+				<!--<span id="app-regist" class="app_f18 app_cmain ">立即注册</span>-->
+			</div>			
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/usermgmt/usermgmt-login.js"></script>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>福利</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/app.css" />
+		<style>
+			.activities_box{margin-top: 10px;}
+			.activities_box:first-child{margin-top: 0px;}
+			.activities_box img{width: 100%;}
+			.mui-table-view-cell>a:not(.mui-btn).mui-active{background: #fff;}
+			
+			#app_pullRefresh{padding: 44px 0 60px;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header app_cf app_bb0 app_header0">
+			<h1 id="app_title" class="mui-title">福利</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-scroll-wrapper" id="app_pullRefresh">
+				<div class="mui-scroll">
+					<div class="" id="app_activities">
+						<!--<div class="activities_box">
+							<ul class="mui-table-view">
+								<img src="../../images/about-banner.png" alt="" />
+								<li class="mui-table-view-cell">
+									<a href="javascript:;" class="mui-navigate-right">
+										<span class="mui-badge mui-badge-inverted app_c3"></span>
+										活动时间：2017-02-13至2017-04-30
+									</a>
+								</li>
+							</ul>
+						</div>-->
+						<!--<div class="activities_box">
+							<ul class="mui-table-view">
+								<img src="../../images/about-banner.png" alt="" />
+								<li class="mui-table-view-cell">
+									<a href="javascript:;" class="mui-navigate-right">
+										<span class="mui-badge mui-badge-inverted app_c3"></span>
+										活动时间：2017-02-13至2017-04-30
+									</a>
+								</li>
+							</ul>
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="app-bar app-bar-tab app_nav_bottom">
+			<a class="app-tab-item app_links" href="javascript:;" data-url="../../html/index/index.html" id="app_homepage">
+				<span class="mui-icon app_icon app_icon_home"></span>
+				<span class="mui-tab-label">理财</span>
+			</a>
+			<a class="app-tab-item app_links app-active"  href="javascript:;" data-url="../../html/activity/activities.html">
+				<span class="mui-icon app_icon app_icon_tn"></span>
+				<span class="mui-tab-label">福利</span>
+			</a>
+			<a class="app-tab-item app_links"  href="javascript:;" data-url="../../html/account/account.html" data-checklogin="true" id="app_account">
+				<span class="mui-icon app_icon app_icon_my"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/activity/activities.js"></script>
+	</body>
+</html>

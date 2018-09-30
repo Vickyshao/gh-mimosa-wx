@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>消息中心</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../css/mui.css">
+		<link rel="stylesheet" href="../../css/app.css">
+		<style type="text/css">
+		.app_p0{
+			padding:0 !important;
+		}
+		.app_cdetail{
+			color: #ad9e8c;
+		}
+		.app_fcred{
+			color: #f65205;
+		}
+		.app_myproduct_box{border-bottom: 1px solid #ccc;background: #fff;padding: 10px 20px;}
+		.app_myproduct_box .app_box_title{text-align: left;color: #444;line-height: 40px;}
+		.app_myproduct_box .app_box_title .app_box_title_txt{line-height: 40px;}
+   		.app_f15{font-size: 15px;}
+   		.app_f13{font-size: 13px;}
+   		.app_ca6{color: #a6a6a6;}
+   		.app_lh24{line-height: 24px;}
+		.top50{ top: 50px !important;}
+		.mui-title img{display: inline-block;width: 10px;margin-left: 2px;}
+		 .message_title{right: 0px;z-index: -10;}
+		.type-list{margin: auto;;margin-top: 40px;width: 100px;border-radius:2px;font-size: 14px;background: rgba(0,0,0,0.9);padding: 0 10px;position: relative;}
+		.type-list:after{content:"";border-width:8px;border-style:solid;border-color: transparent transparent rgba(0,0,0,0.9) transparent;position: absolute;top: -16px;left: 42px;width: 0px;height: 0px;z-index: 1;}
+		.type-list li{height: 36px;line-height: 36px;text-align: center;color: #fff;border-bottom: 1px solid #ccc;}
+		.type-list li:last-child{border-bottom: 0;}
+		.app_txt{
+				height:44px;line-height:44px;font-size: 15px;color: #ffad2b;position: relative;z-index: 222;
+			}
+		.tap_box{width: 100px;display: inline-block;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-left-nav mui-pull-left"></span>
+			<h1 class="mui-title message_title">
+				<span class="tap_box">
+					<span id="app_title">公告</span><img src="../../images/icon_filter.png" alt="" />
+				</span>
+			</h1>
+			<span class="mui-pull-right app_txt app_none" id="app_allread">全部设为已读</span>
+			<ul class="type-list app_none">
+				<li>公告</li>
+				<li>活动</li>
+				<li>站内信(<span class="total">0</span>)</li>
+			</ul>
+		</header>
+		<div class="mui-content ">
+			<div id="app_notice_box" class="mui-scroll-wrapper" style="top: 44px;">
+				<div class="mui-scroll">
+					<div id="app-notice-box">
+						
+					</div>
+				</div>
+			</div>
+			<div id="app_activity_box" class="mui-scroll-wrapper app_none" style="top: 44px;">
+				<div class="mui-scroll">
+					<div id="app-activity-box">
+						
+					</div>
+				</div>
+			</div>
+			<div id="app_mail_box" class="mui-slider mui-fullscreen app_hidden" style="top: 44px;">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted app_np">
+					<a class="mui-control-item mui-control-item1 app_bb0 mui-active" href="#item1mobile">未读消息</a>
+					<a class="mui-control-item mui-control-item1 app_bb0" href="#item2mobile">已读消息</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+				<div class="mui-slider-group top50">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll" id="app_nomail_scroll">
+								<div id="app-nomail-box">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll" id="app_ismail_scroll">
+								<div id="app-ismail-box">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.material.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/account/account-message.js"></script>
+		<script>
+			
+		</script>
+	</body>
+
+</html>

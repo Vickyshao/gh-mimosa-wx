@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>产品介绍</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.css">
+		<link rel="stylesheet" href="../../css/app.css">
+		<style type="text/css">
+		.mui-table-view:after{height: 1px !important;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-left-nav mui-pull-left"></span>
+			<h1 class="mui-title app_productName"></h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-scroll-wrapper" style="top: 44px;">
+				<div class="mui-scroll" id="app_scroll">
+					<ul class="mui-table-view mui-grid-view app_notborder app_list_con">
+			            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-text-left">
+			                <div class="mui-h4 app_c5">投资人</div>
+			            </li>
+			            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-text-center">
+			                <div class="mui-h4 app_c5">投资金额</div>
+			            </li>
+			            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-text-right">
+			                <div class="mui-h4 app_c5">投资时间</div>
+			            </li>
+			        </ul>
+			        <div class="app_c5 app_box_list" id="app_box_list">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.material.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/product-t0/product-t0-protocol.js"></script>
+	</body>
+</html>

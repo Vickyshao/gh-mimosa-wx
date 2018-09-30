@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>资金明细</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-001 **/
+		</style>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav app_header  ">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">资金明细</h1>
+		</header>
+		<div class="mui-content  ">
+			<div id="slider" class="mui-slider mui-fullscreen" style="top: 42px;">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted app_np">
+					<a class="mui-control-item mui-control-item1 app_bb0 app_bre mui-active" href="#app_invest">投资</a>
+					<a class="mui-control-item mui-control-item1 app_bb0 app_bre" href="#app_redeem">还本付息</a>
+					<a class="mui-control-item mui-control-item1 app_bb0 app_bre" href="#app_income">收益</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+				<div class="mui-slider-group top51">
+					<div id="app_invest" class="mui-slider-item mui-control-content app_bt0 mui-active">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view  app_mt10" id="app_typeinvest_ul">
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="app_redeem" class="mui-slider-item mui-control-content app_bt0">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view app_mt10 " id="app_typecash_ul">
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="app_income" class="mui-slider-item mui-control-content app_bt0">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view app_mt10">
+									<li class="mui-table-view-cell">累计收益<span class="mui-pull-right"><span id="Allamount"></span>元</span></li>
+								</ul>
+								<ul class="mui-table-view app_mt10" id="app_typeincome_ul">
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.material.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/account/account-product-tn-deal.js"></script>
+	</body>
+
+</html>

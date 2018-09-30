@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>产品介绍</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.css">
+		<link rel="stylesheet" href="../../css/app.css">
+		<style type="text/css">
+		.mui-table-view.mui-grid-view.app_list_title li{margin-right: 0;}
+		.mui-table-view:after{height: 1px !important;}
+		
+		.app_box_title{text-align: left;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-left-nav mui-pull-left"></span>
+			<h1 class="mui-title app_productName"></h1>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen" style="top: 44px;">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted app_np">
+					<a class="mui-control-item mui-control-item1 app_bb0 app_bre item1mobile" href="#item1mobile">项目介绍</a>
+					<a class="mui-control-item mui-control-item1 app_bb0 app_bre item2mobile" href="#item2mobile">收益说明</a>
+					<a class="mui-control-item mui-control-item1 app_bb0 item3mobile" href="#item3mobile">投资记录</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+				<div class="mui-slider-group top51">
+					<div id="item1mobile" class="mui-slider-item mui-control-content item1mobile">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll" id="app-hold-box">
+								<!--<ul class="mui-table-view app_mt20">
+									<li class="mui-table-view-cell">
+										<span class="mui-badge mui-badge-inverted" id="app_secureLevel"></span>
+										安全等级：
+									</li>
+								</ul>
+								
+								<ul class="mui-table-view  app_mt20" id="app_list">
+									
+								</ul>-->
+								
+								<ul class="mui-table-view app_mt20">
+									<li class="mui-table-view-cell">
+										<span class="mui-badge mui-badge-inverted app_productName"></span>
+										产品名称：
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">产品特点：</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										兼顾收益与风险；收益高、风险低、投资门槛低、投资期限短兑现快。
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">产品简介：</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										<span class="app_productName"></span>是国槐科技为定向委托投资关系的委托人（投资人）及受托人提供的信息中介服务产品，即受托人依据委托人（投资人）指令对合作机构推荐的理财产品进行筛选、分散投资并获取投资收益，具有高收益、低风险等特点。
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">投资范围：</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										主要投资范围包括但不限于信托计划（含信托受益权）、资产管理计划、商业银行理财产品、票据收益权等安全性较高的金融产品。
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">购买规则：</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										单次购买起点<span id="app_investMin">0</span>元，以<span id="app_investAdditional">0</span>元的整数倍递增。
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">理财计划份额：</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										理财计划份额以人民币计价，单位为1份，每份面值为人民币<span id="app_netUnitShare">1</span>元。
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">收益方式：</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										到期一次性还本付息
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">起息日：</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										产品成立开始计算收益，国槐科技平台会以短信的方式通知委托人（投资人）
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">提取到账：</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										到期一次性兑付。受托人在不晚于定向投资标的收益到期日后3个工作日内兑付委托投资收益。委托人（投资人）的本金和收益自动达到账户余额。
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">提取投资费用：</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										每人每月有3次免费提现机会，之后每次2元。
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">平台免责申明：</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										国槐科技作为交易服务平台进行信息发布，不以任何明示、默示或其他方式对任何委托人（投资人）及/或任何交易提供任何担保。国槐科技平台提供的各种信息及资料仅供参考，委托人（投资人）应依其独立判断做出决策。委托人（投资人）据此进行投资交易的，产生的投资风险由委托人（投资人）自行承担，国槐科技不承担任何责任。
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20 app_mb20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">协议文本：</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										查看 <span id="app_investFiles">《定向委托投资协议》</span>、<span id="app_serviceFiles">《风险揭示书》</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content item2mobile">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<!--<ul class="mui-table-view app_mt20">
+									<li class="mui-table-view-cell">
+										<span class="mui-badge mui-badge-inverted" id="app_durationPeriod"></span>
+										存续期(天)：
+									</li>
+								</ul>-->
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_pt12">
+											<span class="app_fb app_f1x">定向委托投资系列中委托人的投资本金及收益如何返还？</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										定向委托投资系列采用的是到期一次兑付法，受托人在不晚于定向投资标的收益到期日后3个工作日内兑付委托投资收益。如因发行机构未及时偿付等原因，致使委托人收款日迟于收益到期日后3个工作日的，受托人将根据委托人的授权或约定，使用受托人认为适当的方式对融资方进行追索。
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">可以提前收回投资吗？</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										在委托人交付委托资金日起，至委托投资清算期终止日止，委托人不得要求提前提取委托资金。
+									</li>
+								</ul>
+								
+								<ul id="" class="mui-table-view app_mt20 app_mb20">
+									<div class="app_box_title">
+										<div class="app_box_title_txt">
+											<span class="app_fb app_f1x">理财收益的测算示例？</span>
+										</div>
+									</div>
+									<li class="mui-table-view-cell">
+										<!--如预期年化收益率为<span class="app_annualInterestSec">0%</span>，投资期限为<span class="app_durationPeriod">0</span>天，投资金额为10000元，则定期产品收益为：10000×(<span class="app_annualInterestSec">0%</span>*<span class="app_durationPeriod">0</span>/<span id="app_incomeCalcBasis">365</span>)=<span class="app_profit">0</span>元-->
+										<!--（1）如预期年化收益率为<span class="app_annualInterestSec">0%</span>，则<span class="app_productName"></span>每万份收益为：10000×(<span class="app_annualInterestSec">0%</span>*<span id="app_durationPeriod">0</span>/<span id="app_incomeCalcBasis">365</span>)＝<span class="app_profit">0</span>元；<br />
+										（2）如委托人（投资人）经受托人确认持有本理财计划50000份，则当日理财计划收益为：50000÷10000*<span class="app_profit">0</span>=<span id="app_dayProfit">0</span>元；-->
+										如预期年化收益率为10%，投资期限为90天，投资金额为10000元，则定期产品收益为：10000×(10%*90/365)＝246.57元
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content item3mobile">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll" id="app_scroll">
+								<ul class="mui-table-view mui-grid-view app_notborder app_list_con">
+						            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-text-left">
+						                <div class="mui-h4 app_c5">投资人</div>
+						            </li>
+						            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-text-center">
+						                <div class="mui-h4 app_c5">投资金额</div>
+						            </li>
+						            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-text-right">
+						                <div class="mui-h4 app_c5">投资时间</div>
+						            </li>
+						        </ul>
+						        <div class="app_c5 app_box_list" id="app_box_list">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.material.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/product-tn/product-tn-protocol.js"></script>
+	</body>
+</html>

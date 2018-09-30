@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>定期产品详情</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.app_block_border{border-right:1px solid rgba(255,255,255,0.5);}
+			.app_top_box{background: url(../../images/bg_tn.png);background-size: 100% 100%;}
+			.app_mycolor{color: rgba(255,255,255,0.8);}
+			.app_bottom_btn{position: fixed;bottom: 10px;width: 100%;}
+			.app_center{margin: 0 auto;}
+			.app_w90p{width: 90%;background: #0D84F2;color: #fff;}
+			.app_w90p.mui-btn:enabled:active{background: #0D84F2;}
+    		.app_setpleft_icon{width:11%;height: 1px;position:absolute; left: 27%;top: 50%;z-index: 2;background: #ececec;}
+    		.app_setpleft_icon:before{width: 5px;height: 5px;border-radius:6px;left: -5px;border:1px solid #ececec;position: absolute;top:-3px;content: " ";display: block;}
+			.app_setpleft_icon:after{width: 5px;height: 5px;border-radius:6px;right: -5px;border:1px solid #ececec;background: #ececec;position: absolute;top:-3px;content: " ";display: block;}
+			.app_setpright_icon{width:11%;height: 1px;position:absolute; right: 30%;top: 50%;z-index: 2;background: #ececec;}
+    		.app_setpright_icon:before{width: 5px;height: 5px;border-radius:6px;left: -5px;border:1px solid #ececec;position: absolute;top:-3px;content: " ";display: block;}
+			.app_setpright_icon:after{width: 5px;height: 5px;border-radius:6px;right: -5px;border:1px solid #ececec;background: #ececec;position: absolute;top:-3px;content: " ";display: block;}
+			
+    	</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header app_bb0 app_header0">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title"></h1>
+		</header>
+		<div class="mui-content app_mui_content0">
+			<div class="app_top_box app_top_box1">
+				<ul class="mui-table-view mui-grid-view app_bgn app_np" style="overflow: hidden;">
+					<li class="mui-table-view-cell mui-col-xs-12 app_lhno app_act_box app_mt10">
+						<div class="app_act_logined">
+							<div class="app-totalValue-box">
+								<div class="app_f40">
+									<span id="app_annualInterest">--</span>%
+								</div>
+								<div class="app_mt5 app_f14 app_mycolor">预期年化收益率</div>
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt20 app_pt0 app_pr app_block_border app_mb20">
+						<div class="app_f12 app_mycolor">起投金额</div>
+						<div class="app_mt5 app_f16" id="app_purchasingAmount">--</div>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt20 app_pt0 app_pr app_block_border app_mb20">
+						<div class="app_f12 app_mycolor">剩余可投(<span id="app_unit"></span>)</div>
+						<div class="app_mt5 app_f16" id="app_canInvestMoney">--</div>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt20 app_pt0 app_mb20">
+						<div class="app_f12 app_mycolor"><span class="app_pr">锁定期</span></div>
+						<div class="app_mt5 app_f16"><span id="app_durationPeriod">--</span>天</div>
+					</li>
+				</ul>
+				</div>
+					<!--<div class="app_tndetail_div_div_div3">
+						<div class="app_progress_bar" id="">
+							<span style="width: 0%" id="app_progressBar"></span>
+						</div>
+						<div class="app_mt10 app_c9" id=""><span>已募集(元)</span><span class="app_progress_txt">剩余额度(元)</span></div>
+						<div class="app_c2" id=""><span id="app_raisedAmount">0</span><span class="app_progress_txt" id="app_canInvestMoney">0</span></div>
+					</div>-->
+				</div>
+			</div>
+			
+			<div class="app_box">
+				<div class="app_box_con app_pr">
+					<ul class="mui-table-view mui-grid-view app_noplr app_noline">
+						<li class="mui-table-view-cell mui-col-xs-4">
+							<div class="app_mt5 app_f14 app_c9">今日投资</div>
+							<div class="app_mt5 app_f14" id="app_investDate">0000-00-00</div>
+						</li>
+						<li class="mui-table-view-cell mui-col-xs-4">
+							<div class="app_mt5 app_f14 app_c9">开始计息</div>
+							<div class="app_mt5 app_f14" id="app_tn_curDate">0000-00-00</div>
+						</li>
+						<li class="mui-table-view-cell mui-col-xs-4">
+							<div class="app_mt5 app_f14 app_c9">还本付息</div>
+							<div class="app_mt5 app_f14" id="app_tn_valueDate">0000-00-00</div>
+						</li>
+					</ul>
+					<div class="app_setpleft_icon"></div>
+					<div class="app_setpright_icon"></div>
+				</div>
+			</div>
+			
+			<div class="app_box app_mt10">
+				<ul class="mui-table-view mui-grid-view mui-text-center mui-grid-9 app_ih_iconlink">
+					<li class="mui-table-view-cell mui-col-xs-4 app_iconc3" id="app_projectDetail" data-tabindex="1">
+						<div class="app_mt10">
+							<div class="app_mb10">
+								<span class="app_icon app_icon_obj app_f30"></span>
+							</div>
+						</div>
+						项目介绍
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_iconc3" id="app_profitExplanation" data-tabindex="2">
+						<div class="app_mt10">
+							<div class="app_mb10 ">
+								<span class="app_icon app_icon_instroduce app_f30"></span>
+							</div>
+						</div>
+						收益说明
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_iconc3" id="app_traderecord" data-tabindex="3">
+						<div class="app_mt10 app_mb10">
+							<div class="app_icon_ihbox">
+								<span class="app_icon app_icon_payrecord"></span>
+							</div>
+						</div>
+						投资记录
+					</li>
+				</ul>
+			</div>
+			<!--<div class="app_mt10 app_mb81">
+				<ul class="mui-table-view">
+						<li class="mui-table-view-cell" id="app_prot0">
+							<a class="mui-navigate-right">
+								相关协议
+							</a>
+						</li>
+						<li class="mui-table-view-cell" id="app_protn">
+							<a class="mui-navigate-right">
+								还款保障
+							</a>
+						</li>
+					</ul>
+			</div>-->
+			<div class="app_bottom_btn" id="app_index_bottom_nav">
+				<button id="app_invest" type="button" class="mui-btn mui-btn-block app_w90p app_center">&nbsp;</button>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/product-tn/product-tn-detail.js"></script>
+	</body>
+</html>

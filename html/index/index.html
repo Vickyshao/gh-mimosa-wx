@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.mui-slider-item img{display: block;}
+			.mui-content{opacity: 0;-webkit-transition: opacity .5s;}
+			.mui-content.app_pages_show{opacity: 1;}
+			.mui-slider-group{max-height: 141px;}
+			.app_notice_icon{width: 32px;line-height:12px;background: #f65205;border-radius:4px;color: #fff;font-size: 10px;display:inline-block;text-align: center;position: relative;padding-top: 3px;top:2px}
+    		.mui-ios .app_notice_icon{padding:2px 0 1px;top:2px}
+    		
+    		.app_progress_bar{height: 3px;background: #d9d9d9;border-radius: 6px;position: relative;margin-right: 60px;}
+    		.app_progress_bar span{height: 100%;display: inline-block;background: #f65205;position: absolute;left: 0;top:0;border-radius: 6px;}
+    		.app_progress_txt{float: right;margin-top: -10px;margin-right: 8px;}
+    		.app_product_ihbox{margin: 5px 5px;border-radius: 5px;border: 1px solid #e5e5e5;background: #fff;padding: 0 10px;}
+    		.app_tag_icon{width: 55px;}
+    		
+    		/*签到*/
+    		
+    		.app_signIn_dialog {position: fixed; top: 0px;left: 0px;width: 100%;height: 100%;z-index: 99999;-webkit-box-orient: horizontal;-webkit-box-pack: center;-webkit-box-align: center; background: rgba(0, 0, 0, 0.67); display: none;opacity: 0;transition:opacity .3s;}
+			.app_signIn_dialog.app_active{display: -webkit-box;display: box;}
+			.app_signIn_dialog.app_show{opacity: 1;}
+    		/*app体验金领取弹框*/
+			.signIn_box{
+			 position: fixed;
+			 top: 50%;
+			 transform: translateY(-50%);  -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -o-transform: translateY(-50%); border-radius:10px;
+			 padding-top: 12%;
+			 left: 5%;
+			 right: 5%;
+			 text-align: center;
+			 /*background: linear-gradient(-1deg, #49d5f8 0%, #3276e8 100%);*/
+			 /*min-height: 100px;*/
+			 color: #fff;
+			}
+			.signIn_box p{
+				color: #fff;
+			}
+			.signIn_box .close{background-image: url(../../images/icon_guan@2x.png);background-size: 100%;width: 28px;height: 28px;position: absolute;right: 15%;top: 7%;}
+    		.signIn_bac{
+				background-size: cover;
+				width: 70%;
+				margin: 40px auto;
+				position: relative;
+				left: initial;
+				/*text-align: center;*/
+			}
+			.signIn_bac img{
+				width: 100%;
+			}
+			.signIn_bac .expgold_amount{
+				position: absolute;
+				left: 50%;
+				top: 66%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%); 	/* IE 9 */
+				-moz-transform: translate(-50%, -50%); 	/* Firefox */
+				-webkit-transform: translate(-50%, -50%); /* Safari 和 Chrome */
+				-o-transform: translate(-50%, -50%); 	/* Opera */
+			}
+			.signIn_bac .expgold_amount2{
+				position: absolute;
+				left: 50%;
+				top: 58%;
+				width: 100%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%); 	/* IE 9 */
+				-moz-transform: translate(-50%, -50%); 	/* Firefox */
+				-webkit-transform: translate(-50%, -50%); /* Safari 和 Chrome */
+				-o-transform: translate(-50%, -50%); 	/* Opera */
+			}
+			.signIn_bac .expgold_amount .app_signIn_font{
+				font-weight: bold;
+				position: relative;
+				color: #0d84f2;
+				font-size: 14px;
+			}
+			/*马上使用：按钮*/
+			.signIn_bac .signIn_btn{
+				/*top: 208px;*/
+				width: 76%; 
+				height: 13%; 
+				position: absolute;
+				bottom: 10%;
+				background: #0d84f2;
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				margin-left: 11.5%;
+			}
+			.signIn_btn .signIn_signIn{
+				font-size: 18px;
+				position: relative;
+				color: white;
+				top: 26%;
+				font-weight: bold;
+			}
+    		/*签到成功*/
+			.app_signIn_font{
+				position: absolute;
+				left: 50%;
+				top: 9.5%;
+				width: 100%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%); 	/* IE 9 */
+				-moz-transform: translate(-50%, -50%); 	/* Firefox */
+				-webkit-transform: translate(-50%, -50%); /* Safari 和 Chrome */
+				-o-transform: translate(-50%, -50%); 	/* Opera */
+			}
+			.app_signIn_font_success{
+				font-size: 23px;
+				font-weight: bold;
+				color: white;
+			}
+			/*获得代金券*/
+			.app_signIn_xianjin{
+				position: absolute;
+				left: 50%;
+				top: 30%;
+				width: 100%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%); 	/* IE 9 */
+				-moz-transform: translate(-50%, -50%); 	/* Firefox */
+				-webkit-transform: translate(-50%, -50%); /* Safari 和 Chrome */
+				-o-transform: translate(-50%, -50%); 	/* Opera */
+			}
+			.app_signIn_font_huo{
+				font-size: 16px;
+				color: #0d84f2;
+			}
+			/*红包金额*/
+			.signIn_bac .expgold_amount .app_signIn_font_2{
+				/*font-weight: bold;*/
+				color: #0d84f2;
+				font-size: 60px;
+				position: relative;
+				/*bottom: 28%;*/
+			}
+			.app_signIn_font_yuan{
+				color: #0d84f2;
+				position: relative;
+				font-size: 15px;
+			}
+			/*签到成功提示*/
+			.app_signIn_font_jinri{
+				position: absolute;
+				left: 50%;
+				bottom: 10%;
+				width: 100%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%); 	/* IE 9 */
+				-moz-transform: translate(-50%, -50%); 	/* Firefox */
+				-webkit-transform: translate(-50%, -50%); /* Safari 和 Chrome */
+				-o-transform: translate(-50%, -50%); 	/* Opera */
+			}
+			.app_signIn_font_jinri1{
+				position: absolute;
+				left: 50%;
+				bottom: 5%;
+				width: 100%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%); 	/* IE 9 */
+				-moz-transform: translate(-50%, -50%); 	/* Firefox */
+				-webkit-transform: translate(-50%, -50%); /* Safari 和 Chrome */
+				-o-transform: translate(-50%, -50%); 	/* Opera */
+			}
+			.app_signIn_font_qiandao{
+				bottom: 18%;
+				color: #0d84f2;
+				font-size: 16px;
+			}
+			/*马上使用：按钮*/
+			.signIn_bac .signIn_btn.app_disabled{
+				/*top: 208px;*/
+				width: 76%; 
+				height: 13%; 
+				position: absolute;
+				bottom: 10%;
+				background: gray;
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				margin-left: 11.5%;
+			}
+			.signIn_bac .expgold_amount.app_pt20{width: 100%;}
+			.signIn_bac .expgold_amount .app_signIn_font_2{
+				color: #0d84f2;
+				font-size: 60px;
+				position: relative;
+			}
+    	</style>
+	</head>
+	<body>
+		<!--<header class="mui-bar mui-bar-nav app_header app_nbborder app_p0" id="app_header_box">
+			<h1 id="app_title" class="mui-title">首页</h1>
+		</header>-->
+		<div class="mui-content">
+			<div class="mui-scroll-wrapper app_b50" id="app_pullRefresh">
+				<div class="mui-scroll app_pb5" id="app_content_box">
+					
+				</div>
+			</div>
+		</div>
+		<nav class="app-bar app-bar-tab app_nav_bottom">
+			<a class="app-tab-item app_links app-active" href="javascript:;" data-url="../../html/index/index.html" id="app_homepage">
+				<span class="mui-icon app_icon app_icon_home"></span>
+				<span class="mui-tab-label">理财</span>
+			</a>
+			<a class="app-tab-item app_links" href="javascript:;" data-url="../../html/activity/activities.html">
+				<span class="mui-icon app_icon app_icon_tn"></span>
+				<span class="mui-tab-label">福利</span>
+			</a>
+			<a class="app-tab-item app_links"  href="javascript:;" data-url="../../html/account/account.html" data-checklogin="true" id="app_account">
+				<span class="mui-icon app_icon app_icon_my"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+			
+			<!--签到-->
+			<div class="app_signIn_dialog" id="app_show_sigin">
+				<div class="signIn_box">
+				 	<div class="close app_signIn_close"></div>
+				    <div class="app_mt40 signIn_bac">
+				     	<img src="../../images/hongbaotankuang_1@2x.png" alt="" />
+				     	<div class="expgold_amount">
+				     		<h5 class="app_signIn_font">每日惊喜领不停</h5>
+				     	</div>
+				     	<div class="signIn_btn" id="app_signIn_btn">
+					     	<span class="signIn_signIn">签到</span>
+					    </div>
+				    </div>
+			    </div>
+			</div>
+			<!--签到成功-->
+			<div class="app_signIn_dialog" id="app_show_siginsuccess">
+			 <div class="signIn_box">
+			 	 <div class="close app_signIn_close"></div>
+			     <div class="app_mt40 signIn_bac">
+			     	<img src="../../images/hongbaotankuang_2@2x.png" alt="" />
+			     	<div class="app_signIn_font">
+			     		<h5 class="app_signIn_font_success">签到成功</h5>
+			     	</div>
+			     	<div class="app_signIn_xianjin">
+			     		<h5 class="app_signIn_font_huo">获得代金券</h5>
+			     	</div>
+			     	<div class="expgold_amount expgold_amount2">
+			     		<span class="app_signIn_font_2 app_signIn_money" id="">0</span>
+			     		<span class="app_signIn_font_yuan">元</span>
+			     	</div>
+			     	<div class="signIn_btn" id="app_signIn_use">
+				     	<span class="signIn_signIn">马上使用</span>
+				    </div>
+			     </div>
+		     </div>
+			</div>
+			<!--已经签到-->
+			<div class="app_signIn_dialog" id="app_show_siginyse">
+			 <div class="signIn_box">
+			 	 <div class="close app_signIn_close"></div>
+			     <div class="app_mt40 signIn_bac">
+			     	<img src="../../images/hongbaotankuang_2@2x.png" alt="" />
+			     	<div class="app_signIn_font">
+			     		<h5 class="app_signIn_font_success">已签到</h5>
+			     	</div>
+			     	<div class="app_signIn_xianjin">
+			     		<h5 class="app_signIn_font_huo">获得代金券</h5>
+			     	</div>
+			     	<div class="expgold_amount expgold_amount2">
+			     		<span class="app_signIn_font_2 app_signIn_money" id="">0</span>
+			     		<span class="app_signIn_font_yuan">元</span>
+			     	</div>
+			     	<div class="app_signIn_font_jinri">
+			     		<h5 class="app_signIn_font_qiandao">今日已签到，明天再来哦！</h5>
+			     	</div>
+			     </div>
+		     </div>
+			</div>
+			<!--活动结束-->
+			<div class="app_signIn_dialog" id="app_show_siginend">
+			 <div class="signIn_box">
+			 	 <div class="close app_signIn_close"></div>
+			     <div class="app_mt40 signIn_bac">
+			     	<img src="../../images/hongbaotankuang_3@2x.png" alt="" />
+			     	<!--<div class="expgold_amount app_pt20">
+			     		<h5 class="app_signIn_font">今日卡券已领完</h5>
+			     	</div>
+			     	<div class="signIn_btn app_disabled" id="">
+				     	<span class="signIn_signIn">签到</span>
+				    </div>-->
+				    <div class="app_signIn_font_jinri1">
+			     		<h5 class="app_signIn_font_qiandao">今日已签到，明天再来哦！</h5>
+			     	</div>
+			     </div>
+		     </div>
+			</div>
+		
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/require.min.js"></script>
+		<script src="../../js/component/template-cfg.js"></script>
+		<script src="../../js/index/index.js"></script>
+	</body>
+</html>

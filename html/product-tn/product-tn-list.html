@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>定期产品列表</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.app_product_list{}
+    		.app_progress_bar{height: 3px;background: #d9d9d9;border-radius: 6px;position: relative;margin-right: 55px;}
+    		.app_progress_bar span{height: 100%;display: inline-block;background: #f65205;position: absolute;left: 0;top:0;border-radius: 6px;}
+    		.app_progress_txt{float: right;margin-top: -10px;margin-right: 3px;}
+
+    		.app_filter_list{min-height: 340px;background: #fff;padding: 0 20px 66px;text-align: left;}
+
+    		.app_c4{color: #444444;}
+    		.app_c8{color: #888888;}
+    		.app_filter_view{}
+    		.app_filter_view.app_active{display: block;}
+    		.app_filter_view li{float: left;width: 33.3333%;}
+    		.app_filter_view li a{height:36px;text-align: center;background: #f0ece9;color: #333;line-height:38px;margin: 5px;display: block;border-radius: 3px;}
+    		.app_filter_view li.app_active a{color: #fff;background: #0D84F2}
+    		
+    		.app_filter_btn_box{height: 40px;position: absolute;left:20px;bottom:7px;right: 20px;}
+    		.app_filter_btn_box li{float: left;}
+    		.app_filter_btn_box .mui-btn-block{padding: 6px 0 5px;border-radius: 0;font-size: 14px;line-height: 18px;color: #fff;background: #0D84F2;border: 1px solid #0D84F2;}
+    		#app_list_tips { text-align: center;}
+    		
+			.app_product_ihbox{margin: 5px 0;border-radius: 0;border: 1px solid #e5e5e5;background: #fff;padding: 0 12px;position: relative;}
+			
+			.app_product_ihbox_title{border-bottom: none;padding-bottom: 0;}
+    		.app_product_ihcon{border-bottom: 1px solid #EFECE8;}
+    		.app_tag_icon{width: 55px;display: inline-block;}
+    		.app_product_icon{background: #ff8c4c;width: 60px;height: 22px;color: #fff;position: absolute;right: 10px;top: 0;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;font-size: 12px;text-align: center;line-height: 22px;}
+    		.sold_out .app_product_icon{background: #d1d1d1;}
+    		.app_experiencefund{text-align: center;}
+    		.app_experiencefund h2{padding: 10px; color: #f65205;}
+    		.app_experiencefund h5{padding-bottom: 10px;}
+    		.sold_out .app_experiencefund h2{color: #999;}
+    		.app_cf71{color: #717171;}
+    		.app_progress{width: 66px;height: 66px;}
+    		.app_progress img{width: 100%;}
+    		.circle {
+				width: 66px;
+				height: 66px;  
+				position: absolute;
+				right: 0;
+				top: -3px;
+				border-radius: 50%;
+				background: #0D84F2;
+			}
+			.pie_left, .pie_right {
+				width: 66px; 
+				height: 66px;
+				position: absolute;
+				top: 0;left: 0;
+			}
+			.left, .right {
+				display: block;
+				width:66px; 
+				height:66px;
+				background:#DFDFDF;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.pie_right, .right {
+				clip:rect(0,auto,auto,33px);
+			}
+			.pie_left, .left {
+				clip:rect(0,33px,auto,0);
+			}
+			.mask {
+				width: 56px;
+				height: 56px;
+				border-radius: 50%;
+				left: 5px;
+				top: 5px;
+				background: #FFF;
+				position: absolute;
+				text-align: center;
+				line-height: 56px;
+				font-size: 12px;
+				color: #0D84F2;
+			}
+			.app_f38{font-size: 38px;}
+			.app_mt6{margin-top: 6px;}
+			.app_f21{font-size: 21px;}
+			.text-align-center{text-align: center;}
+			.center{
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%);
+				-ms-transform:translate(-50%); 	/* IE 9 */
+				-moz-transform:translate(-50%); 	/* Firefox */
+				-webkit-transform:translate(-50%); /* Safari 和 Chrome */
+				-o-transform:translate(-50%)}
+			
+    		.mui-table-view{margin-top: 0 !important;}
+    		.mui-grid-view.mui-grid-9 .mui-media.app_c3b{color: #3b3b3b;}
+    		.mui-scroll-wrapper{top:44px}
+    		.app_br0{border-right: 0 !important;}
+    	</style>
+	</head>
+	<body>
+		<div class="mui-content">
+			<ul class="mui-table-view mui-grid-view mui-text-center mui-grid-9 app_filter_nav">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 app_c3b" id="app_filter_btn_02">					
+					投资期限
+					<span class="app_icon_box"><img src="../../images/icon_nor.png"/></span>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 app_c3b" id="app_filter_btn_03">
+					年化利率
+					<span class="app_icon_box"><img src="../../images/icon_nor.png"/></span>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 app_c3b app_br0" id="app_filter_btn">
+					筛选
+					<span class="app_icon_box" id="app_icon_box">
+						<img src="../../images/icon_filter.png" class="app_filter_icons_open"/>
+					</span>
+				</li>
+			</ul>
+			<div class="mui-scroll-wrapper app_b50" id="app_pullRefresh">
+				<div class="mui-scroll">
+					<div class="app_product_list">
+						<!--<div class="app_product_ihbox app_showdetail">
+							<div class="app_product_ihbox_title app_c4">暴风定期宝1号
+								<span class="app_tag_icon app_tag_c1">理财爆品</span>
+								<span class="app_tag_icon app_tag_c1">理财爆品</span>
+								<span class="mui-pull-right app_ca6 app_f12">100元起投</span>
+							</div>
+							<div class="app_product_ihcon app_clearfix">
+								<div class="app_product_ihview app_fl app_pt5 mui-col-xs-6">
+									<div class="">
+										<div class="app_cmain ">
+											<span class="app_f16"><span class="app_f30">2</span>.00~<span class="app_f30">4</span>.00%</span>
+										</div>
+										<p class="app_f12 app_cb3a app_mt6 app_ca6">预期年化收益率</p>
+									</div>
+								</div>
+								<div class="app_pt5 text-align-center app_pa center">
+									<div class="">
+										<div class="app_cf71 app_f14">
+										<span class="app_f30">365</span>天
+									</div>
+									<p class="app_f12 app_cb3a app_mt6 app_ca6">投资期限</p>
+									</div>
+								</div>
+								<div class="app_product_ihview app_fl mui-col-xs-6">
+									<div class="circle">
+									    <div class="pie_left"><div class="left"></div></div>
+										<div class="pie_right"><div class="right"></div></div>
+										<div class="mask"><span class="app_f18">40.00</span>%</div>
+									</div>
+								</div>
+							</div>
+						</div>-->
+					</div>
+					<div id="app_list_tips" class="app_tc app_mt50 app_pt50 app_pb20 app_none">
+						<div class="app_tc app_nodata_tips"><img src="../../images/app_nodata2.png" alt="" /></div>
+						<div class="app_mt20 app_cgray app_f20">&nbsp;没有筛选结果!</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="app_dialog" id="app_dialog_box">
+			<div class="app_dialog_box mui-text-center app_slider_down app_f14" style="height: auto;">
+
+				<div class="app_filter_list">
+					<p class="app_pt10 app_pl5 app_none">保障方式</p>
+					<ul class="app_filter_view app_none mui-clearfix app_sort_box1">
+						<li class="app_filter_def app_active" data-sort='{"reveal":""}'>
+							<a href="javascript:;">全部</a>
+						</li>
+						<li data-sort='{"reveal":"YES"}'>
+							<a href="javascript:;">履约保证金</a>
+						</li>
+					</ul>
+					<!--<p class="app_pt10 app_pl5">起投金额</p>
+					<ul class="app_filter_view mui-clearfix app_sort_box2">
+						<li class="app_filter_def app_active" data-sort='{"investMinStart":"","investMinEnd":""}'>
+							<a href="javascript:;">全部</a>
+						</li>
+						<li data-sort='{"investMinStart":"","investMinEnd":"10000"}'>
+							<a href="javascript:;">1万元以下</a>
+						</li>
+						<li data-sort='{"investMinStart":"10000","investMinEnd":"50000"}'>
+							<a href="javascript:;">1万-5万元</a>
+						</li>
+						<li data-sort='{"investMinStart":"50000","investMinEnd":"100000"}'>
+							<a href="javascript:;">5万-10万元</a>
+						</li>
+						<li data-sort='{"investMinStart":"100000","investMinEnd":""}'>
+							<a href="javascript:;">10万元以上</a>
+						</li>
+					</ul>-->
+					<p class="app_pt10 app_pl5">投资期限</p>
+					<ul class="app_filter_view mui-clearfix app_sort_box3">
+						<li class="app_filter_def app_active" data-sort='{"durationPeriodDaysStart":"","durationPeriodDaysEnd":""}'>
+							<a href="javascript:;">全部</a>
+						</li>
+						<li data-sort='{"durationPeriodDaysStart":"","durationPeriodDaysEnd":"29"}'>
+							<a href="javascript:;">30天内</a>
+						</li>
+						<li data-sort='{"durationPeriodDaysStart":"30","durationPeriodDaysEnd":"89"}'>
+							<a href="javascript:;">30-89天</a>
+						</li>
+						<li data-sort='{"durationPeriodDaysStart":"90","durationPeriodDaysEnd":"179"}'>
+							<a href="javascript:;">90-179天</a>
+						</li>
+						<li data-sort='{"durationPeriodDaysStart":"180","durationPeriodDaysEnd":"359"}'>
+							<a href="javascript:;">180-359天</a>
+						</li>
+						<li data-sort='{"durationPeriodDaysStart":"360","durationPeriodDaysEnd":""}'>
+							<a href="javascript:;">360天及以上</a>
+						</li>
+					</ul>
+					<p class="app_pt10 app_pl5">年化收益</p>
+					<ul class="app_filter_view mui-clearfix app_sort_box4">
+						<li class="app_filter_def app_active" data-sort='{"expArorStart":"","expArorEnd":""}'>
+							<a href="javascript:;">全部</a>
+						</li>
+						<li data-sort='{"expArorStart":"","expArorEnd":"0.0799"}'>
+							<a href="javascript:;">8% 以下</a>
+						</li>
+						<li data-sort='{"expArorStart":"0.08","expArorEnd":"0.1"}'>
+							<a href="javascript:;">8% - 10%</a>
+						</li>
+						<li data-sort='{"expArorStart":"0.1001","expArorEnd":""}'>
+							<a href="javascript:;">10% 以上</a>
+						</li>
+					</ul>
+				</div>
+				
+				<ul class="app_filter_btn_box app_clearfix">
+					<li class="mui-col-xs-12 app_pl5">
+						<a href="javascript:;" class="mui-btn mui-btn-block app_btn_hide mui-btn-outlined" id="app_filter_btn_confirm">确定</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		<nav class="app-bar app-bar-tab app_nav_bottom">
+			<a class="app-tab-item app_links" href="javascript:;" data-url="../../html/index/index.html" id="app_homepage">
+				<span class="mui-icon app_icon app_icon_home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="app-tab-item app_links"  href="javascript:;" data-url="../../html/product-t0/product-t0-list.html" id="app_productlist">
+				<span class="mui-icon app_icon app_icon_t0"></span>
+				<span class="mui-tab-label">活期</span>
+			</a>
+			<a class="app-tab-item app_links app-active"  href="javascript:;" data-url="../../html/product-tn/product-tn-list.html" id="app_productlist">
+				<span class="mui-icon app_icon app_icon_tn"></span>
+				<span class="mui-tab-label">定期</span>
+			</a>
+			<a class="app-tab-item app_links"  href="javascript:;" data-url="../../html/account/account.html" data-checklogin="true" id="app_account">
+				<span class="mui-icon app_icon app_icon_my"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/product-tn/product-tn-list.js"></script>
+	</body>
+</html>

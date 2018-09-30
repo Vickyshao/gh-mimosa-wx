@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>提现</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style>
+			.app_with_yuan{position: relative;}
+			.app_with_yuan .app_yuan {right: 20px;font-size: 18px;width: 10px;bottom: 15px;position: absolute;margin-top: 30px;}
+			.app_with_yuan input{padding-left: 45px;}
+			.mui-input-row label{padding-bottom: 0;}
+			.app_with_yuan .app_yuan_tip {left: 16px;font-size: 24px;bottom: 13px;width: 10px;position: absolute;}
+		</style>
+	</head>
+	<body class="account-widthdraw">
+		<header class="mui-bar mui-bar-nav app_header">
+
+		<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">提现</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view app_mt20 app_paycard">
+				<li class="mui-table-view-cell">
+					<a class="">
+						<img id="app_bankimg" class="mui-media-object mui-pull-left" src="">
+						<div class="mui-media-body app_mt10"><span id="app_bankName"></span>
+							(<span id="app_bankCardNum" class="app_c3b"></span>)
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="app_mt20">
+				<div class="mui-input-group">
+					<div class="mui-input-row amount" id="app_money_div">
+						<label>提现金额</label>
+						<div class="app_with_yuan">
+							<span class="app_yuan_tip">￥</span>
+							<input type="text" id="app_withdrawMoney" placeholder="输入金额" class="" valid='{"required":true,"msg":"提现金额不能为空","tipsbox":"#app_tips_box"}' maxlength="12" oninput="GHUTILS.checkInput(this,3)">
+							<span class="app_yuan">元</span>
+						</div>
+					</div>
+						<div class="app_clearfix app_tips_txt">
+							<span class="mui-ellipsis mui-h6 app_c8b app_pl20 app_fl">当前余额 <span id="app_Balance" class="app_c3b">0.00</span> 元</span>
+							<span class="mui-ellipsis mui-h6 app_c8b app_pr20 app_fr">可提现余额 <span id="app_availableBalance" class="app_c3b">0.00</span> 元</span>
+						<!--<p class="mui-ellipsis mui-h6 app_c8b app_pr20">当前余额 <span id="app_availableBalance" class="app_c3b">0.00</span> 元</p>-->
+						</div>
+				</div>
+				<div class="mui-input-group app_mt20">
+					<div class="mui-input-row">
+						<label>支付密码</label>
+						<input type="password" id="app_dealpwd" class="mui-input-password" placeholder="请输入支付密码" valid='{"required":true,"msg":"支付密码不能为空","tipsbox":"#app_tips_box","subvalid":[{"finalLength":"6","msg":"支付密码输入错误"},{"passWord":true,"msg":"密码中不允许有空格"}]}' maxlength="6" oninput="GHUTILS.checkInput(this,1)"/>
+					</div>
+				</div>
+				<div class="app-content-padded app_clearfix app_pr15">
+					<div class="app_cred app_pl20 app_tips_txt" id="app_tips_box">&nbsp;</div>
+				</div>
+				<div class="app_ml20 app_mr20">
+					<button id="app_withdrawBtn" type="button" class="mui-btn mui-btn-primary mui-btn-block" disabled="disabled">立即提现</button>
+				</div>
+				<div class="app_m20 app_content_txt">
+					<p>提现规则：</p>
+					<p>1、每位用户每月可享受<span class="app_WithdrawNum">--</span>次免费提现，超出后提现费<span class="app_TradingDayWithdrawFee">--</span>元/笔，手续费将从您的账户余额内扣除；</p>
+					<p>2、工作日16点前申请当日到账，16点后申请顺延至下个工作日；（具体到账时间以银行处理时间为准）</p>
+					<p>3、周末和法定节假日提现，到账时间顺延至下个工作日。</p>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/digitsToBigRMB.js"></script>
+		<script src="../../js/component/bank.js"></script>
+		<script src="../../js/account/account-withdraw.js"></script>
+	</body>
+</html>

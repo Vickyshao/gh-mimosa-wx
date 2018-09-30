@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<title>我的资产</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/mui.picker.min.css" rel="stylesheet">
+		<link href="../../css/gray.css" rel="stylesheet">
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-001 **/
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav app_header app_nbborder app_mui_bar ">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">我的资产</h1>
+		</header>
+		<div class="mui-content ">
+			<div class="">
+				<div class="app_css_chart">
+					<!--<img src="../../images/app_crl_bg.png" class="app_crl_chartbg"/>-->
+					<div id="app_pie_chart" class="app_pie_chart"></div>
+
+					<!--<canvas id="app_pie_chart" width="240" height="240" />-->
+					<div class="app_pie_txt">
+						<div class="app_f16 app_mt15 app_c9 app_pt50">总资产(元)</div>
+						<div class="app_f30 app_mt20 app_c3" id="app_totalSal">0.00</div>
+					</div>
+				</div>
+				<div class="app_legend_box">
+					<div class="app_legend_view">
+						<span class="mui-pull-right app_f1x app_c3" id="app_hqTotalAmt"></span>
+						<span class="app_icon_circle app_chart_c1"></span>
+						<span class="app_c6">活期资产</span>
+						<div class="app_amtt0detail app_c9">
+							
+						</div>
+					</div>
+					
+					<div class="app_legend_view">
+						<span class="mui-pull-right app_f1x app_c3" id="app_dsTotalAmount"></span>
+						<span class="app_icon_circle app_chart_c2"></span>
+						<span class="app_c6">定期资产</span>
+						<div class="app_amttndetail app_c9">
+							
+						</div>
+					</div>
+					<div class="app_legend_view">
+						<span class="mui-pull-right app_f1x app_c3" id="app_apply"></span>
+						<span class="app_icon_circle app_chart_c3"></span>
+						<span class="app_c6">申请中资产</span>
+						<div class="app_amtapplydetail app_c9">
+							
+						</div>
+					</div>
+					<div class="app_legend_view">
+						<span class="mui-pull-right app_f1x app_c3" id="app_balance"></span>
+						<span class="app_icon_circle app_chart_c4"></span>
+						<span class="app_c6">可用余额</span>
+					</div>
+					<div class="app_legend_view">
+						<span class="mui-pull-right app_f1x app_c3" id="app_onWayBalance"></span>
+						<span class="app_icon_circle app_chart_c5"></span>
+						<span class="app_c6">冻结金额</span>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/echarts.simple.min.js"></script>
+		<script src="../../js/account/account-details.js"></script>
+	</body>
+
+</html>

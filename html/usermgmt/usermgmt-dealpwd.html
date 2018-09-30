@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>交易密码</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			.app_num_safe_view{margin:0 10%;}
+			.app_num_safe_view .app_num_safebox{width: 100%;}
+			.app_num_safebox{border:1px solid #ccc;margin: auto;border-collapse: collapse;background: #fafafa;}
+			.app_num_safebox td{border:1px solid #ccc;width:40px;height:40px;text-align:center;font-size:30px;color: #595959;position:relative;}
+			/*.app_num_safebox td.app_point:before{content:"\e62d";font-family: Muiicons;position: absolute;width: 30px;height:30px;left:50%;top:50%;margin-left: -15px;line-height:28px;margin-top: -14px;}*/
+			.app_input_safenum{position: absolute;top:0;left:0;height:40px!important;opacity:0;padding:0!important;margin-bottom: 0!important;text-indent: -999px;width: 200%!important;margin-left:-50%;}
+			.app_point{width: 20px;height: 20px;margin: auto;background-color: #595959;border-radius: 50%;}
+			
+			.app_mobilediv{height: 60px;line-height: 60px;color: #878b8a;text-align: center;}
+			.app_ml17{margin-left: 17px;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">交易密码</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper app_none steps" id="stepOne">
+					<div class="mui-scroll">
+						<div id="" class="app_pt50">
+							<div class="mui-text-center app_mt30 app_pt50 app_pb20 mui-h4 app_c3">请输入您的交易密码</div>
+							<div class="mui-input-row app_input_row_w2 app_pr app_num_safe_view">
+								<table border="0" cellspacing="0" cellpadding="0" class="app_num_safebox">
+									<tr><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td></tr>
+								</table>
+								<input type="tel" class="mui-text-left app_input_safenum" maxlength="6" id="app_dealpwd">
+							</div>
+							<div class="mui-content-padded mui-text-center">
+								<span id="app_tips_box" class="app_tips_txt mui-h5 app_cred">&nbsp;</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="mui-page-content app_none steps" id="stepTwo">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div id="" class="app_pt50">
+							<div class="mui-text-center app_mt30 app_pt50 app_pb20 mui-h4 app_c3" id="app_setdealpwd1">请设置您的交易密码</div>
+							<div class="mui-input-row app_input_row_w2 app_pr app_num_safe_view">
+								<table border="0" cellspacing="0" cellpadding="0" class="app_num_safebox">
+									<tr><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td></tr>
+								</table>
+								<input type="tel" class="mui-text-left app_input_safenum" maxlength="6" id="app_dealpwd1">
+							</div>
+							<div class="mui-content-padded mui-text-center">
+								<span id="app_tips_box1" class="app_tips_txt mui-h5 app_cred">&nbsp;</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="mui-page-content app_none steps" id="stepThree">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div id="" class="app_pt50">
+							<div class="mui-text-center app_mt30 app_pt50 app_pb20 mui-h4 app_c3" id="app_setdealpwd2">请输入您的原交易密码</div>
+							<div class="mui-input-row app_input_row_w2 app_pr app_num_safe_view">
+								<table border="0" cellspacing="0" cellpadding="0" class="app_num_safebox">
+									<tr><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td></tr>
+								</table>
+								<input type="tel" class="mui-text-left app_input_safenum" maxlength="6" id="app_dealpwd2">
+							</div>
+							<div class="mui-content-padded mui-text-center">
+								<span id="app_tips_box2" class="app_tips_txt mui-h5 app_cred">&nbsp;</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="steps app_none" id="stepFour">
+				<div class="app_mobilediv">
+					已验证手机号为 <span id="app_mobile">&nbsp;</span>
+				</div>
+				<div class="mui-input-group app_input_group">
+					<div class="mui-input-row">
+						<label>验证码</label>
+						<a href="javascript:;" id="app_message" class="mui-btn app_btn_line">获取验证码</a>
+						<input id="app_vericode" type="tel" class="app_vcode_input" placeholder="请输入短信验证码" valid='{"required":true,"msg":"验证码不能为空","tipsbox":"#app_tips_box3","subvalid":[{"positiveInteger":true,"msg":"验证码输入错误","minLength":6}]}' maxlength="6" oninput="GHUTILS.checkInput(this,5)"/>
+					</div>
+				</div>
+				<div class="app_m20 app_ml17 app_f14 app_clearfix">
+					<span id="app_tips_box3" class="mui-h5 app_cred app_pr20 ">&nbsp;</span>
+				</div>
+				<div class="app_m25">
+					<button id="app_resetPwd" type="button" class="mui-btn mui-btn-primary mui-btn-block">下一步</button>
+				</div>
+			</div>
+			
+			<div class="mui-page-content app_none steps" id="stepFive">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div id="" class="app_pt50">
+							<div class="mui-text-center app_mt30 app_pt50 app_pb20 mui-h4 app_c3" id="app_setdealpwd3">请输入新的交易密码</div>
+							<div class="mui-input-row app_input_row_w2 app_pr app_num_safe_view">
+								<table border="0" cellspacing="0" cellpadding="0" class="app_num_safebox">
+									<tr><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td></tr>
+								</table>
+								<input type="tel" class="mui-text-left app_input_safenum" maxlength="6" id="app_dealpwd3">
+							</div>
+							<div class="mui-content-padded mui-text-center">
+								<span id="app_tips_box4" class="app_tips_txt mui-h5 app_cred">&nbsp;</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/usermgmt/usermgmt-dealpwd.js"></script>
+	</body>
+
+</html>

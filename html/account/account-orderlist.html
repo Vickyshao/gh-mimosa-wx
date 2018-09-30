@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>我的定期</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../css/mui.css">
+		<link rel="stylesheet" href="../../css/app.css">
+		<style type="text/css">
+			.app_box_title{text-align: left;padding:1px 15px;margin:0;color: #444;line-height: 40px;}
+			.mui-table-view.mui-grid-view{padding:0px;overflow: hidden;}
+			.app_block_border {border-right: 1px solid rgba(255,255,255,0.5);}
+			.mui-table-view.mui-grid-view .mui-table-view-cell{float: left;padding: 10px 0 10px 15px;}
+			.app_myproduct_box{padding: 10px 20px;background: #fff;border-bottom: 1px solid #ccc;}
+			.account-orderlist .app_myproduct_box .app_box_title .app_box_title_txt{line-height: 40px;}
+		</style>
+	</head>
+
+	<body class="account-orderlist">
+		<header class="mui-bar mui-bar-nav app_header  ">
+			<span class="mui-action-back mui-icon app_icon mui-icon-left-nav mui-pull-left"></span>
+			<h1 class="mui-title">我的定期</h1>
+		</header>
+		<div class="mui-content  ">
+			<div class="app_top_box app_top_box1">
+						<ul class="mui-table-view mui-grid-view app_bgn app_np" style="overflow: hidden;">
+							<li class="mui-table-view-cell mui-col-xs-12 app_lhno app_act_box">
+								<div class="app_act_logined">
+									<div class="app_mt10 app_f40">
+										<span id="app-holdamt">0.00</span>
+									</div>
+									<div class="app_mt5 app_f14 app_cf80">总资产(元)</div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-col-xs-6 app_mt20 app_pt0 app_block_border">
+								<div class="app_f12 app_cf80">昨日收益(元)</div>
+								<div class="app_mt5 app_f16" id="yes-income">0.00</div>
+							</li>
+							<li class="mui-table-view-cell mui-col-xs-6 app_mt20 app_pt0" id="app-historySY-box">
+								<div class="app_f12 app_cf80">累计收益(元)</div>
+								<div class="app_mt5 app_f16" id="app-historySY">0.00</div>
+							</li>
+						</ul>
+
+					</div>
+			<div id="slider" class="mui-slider mui-fullscreen app_t220" style="top: 240px !important;">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted app_np">
+					<a class="mui-control-item mui-control-item1 app_bb0 mui-active" href="#item1mobile">持有中(<span id="holdcount">0</span>)</a>
+					<a class="mui-control-item mui-control-item1 app_bb0" href="#item2mobile">申请中(<span id="applycount">0</span>)</a>
+					<a class="mui-control-item mui-control-item1 app_bb0" href="#item3mobile">已结清(<span id="closedcount">0</span>)</a> 
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+				<div class="mui-slider-group top51">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper" style="overflow: auto;">
+							<div class="mui-scroll">
+								<div id="app-hold-box">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper" style="overflow: auto;">
+							<div class="mui-scroll">
+								<div id="app-apply-box">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper" style="overflow: auto;">
+							<div class="mui-scroll">
+								<div id="app-closed-box">									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/account/account-orderlist.js"></script>
+		<script>
+			
+		</script>
+	</body>
+
+</html>

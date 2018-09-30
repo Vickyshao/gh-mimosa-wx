@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.app_lh25 {
+				line-height: 25px;
+			}
+
+			.app-width-15 {
+				width: 10%;
+			}
+			.app_mybanner img{
+				width: 100%;
+			}
+			.app_pt0{
+				padding-top:0 !important;
+			}
+			
+			.app_block_border{
+				border-right:1px solid rgba(255,255,255,0.5);
+			}
+			.app_act_logined{position: relative;}
+			.app_see_amt{position: absolute;right: 10%;top: 8px;z-index: 4;}
+			.app_mybtn_bg1{background: #0d84f2;}
+			.app_mybtn_bg2{background: #f4551f;}
+			.app_btn_from{padding: 10px 0;}
+			.app_showmore{position: absolute;top: 50%;right: -20px;top: 20px;}
+			.app_my_titlebox{position: relative;padding-right: 10px;padding-left: 10px;}
+			.app_my_title{
+				position: absolute;
+				text-align: center;
+				right: 40px;
+			    left: 40px;
+			    line-height: 44px;
+			    font-size: 18px;
+			    display: inline-block;
+			    overflow: hidden;
+			    width: auto;
+			    margin: 0;
+			    text-overflow: ellipsis;
+			    z-index: 10;
+			}
+			.app_mycolor{color: rgba(255,255,255,0.8);}
+			.mui-table-view.mui-grid-view .mui-table-view-cell{margin-right: 0;}
+			.clear{clear: both;}
+			.mui-scroll-wrapper{bottom:50px;overflow:auto;}
+			.app_see_amt{width: 60px;height: 30px;}
+			@media only screen and (max-width: 330px) {
+				.app_f2_5x{font-size: 2rem;}
+				.app_f2x{font-size: 1.5rem;}
+				.app_f1_5x{font-size: 1rem;}
+			}
+			.app_top_box1{max-height: 510px;}
+			.appmy_left_span{width: 28px;text-align:center;line-height: 28px;margin-top: 10px;display: inline-block;float: left;background: rgba(255,255,255,0.4);border-radius: 50%;}
+			.appmy_phone{position: absolute;left: 0;top: 12px;background: rgba(255,255,255,0.2);border-radius: 50px;line-height: 20px;padding: 2px 12px 2px 32px;}
+			.app_border_rb{border-right: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;}
+			.app_border_r{border-right: 1px solid #e5e5e5;}
+			.app_border_b{border-bottom: 1px solid #e5e5e5;}
+			.app_bnp{padding: 0 !important;}
+			.app_pl0{padding-left: 0 !important;}
+			.app_btn_box{width: 50%;float: left;padding: 0 20px;margin-top: 10px;}
+			.app_btn_box:first-child{padding-right: 5px;}
+			.app_btn_box:last-child{padding-left: 5px;}
+			.app_btn_left,.app_btn_right{line-height: 44px;border-radius: 4px;margin-bottom: 20px;text-align: center;}
+			.app_btn_left{background: #ffac2b;margin-right: 5px;}
+			.app_btn_right{background: #ff5715;margin-left: 5px;}
+			.mui-table-view-cell:after{left: 35px;}
+			a.mui-navigate-right .app_icon{display: inline-block;position: relative;top: 3px;margin-right: 2px;}
+			.account-webview .app_see_amt{top: 0;right: 25%;}
+    	</style>
+	</head>
+	<body class="account-webview">
+		<div class="mui-content" style="margin-bottom: 55px;">
+			<div class="mui-scroll-wrapper app_mymin_height app_b50" id="app_pullRefresh">
+				<div class="mui-scroll app_pb5">
+					<!--描述：我的资产-->
+					<div class="app_top_box app_top_box1">
+						<div class="app_my_titlebox app_header0">
+							<span class="mui-pull-left appmy_right app_pr" id="app_setting">
+								<span class="appmy_left_span mui-icon mui-icon-person"></span>
+								<span class="appmy_phone">***********</span>
+							</span>
+							<!--<div class="app_my_title ">
+								我的
+							</div>-->
+							<span class="mui-pull-right appmy_right app_pr" id="app_mymessage">
+								<span class="appmy_right_span app_icon app_icon_message"></span>
+								<span class="appmy_rightcount app_cmain app_none"></span>
+							</span>
+							<span class="mui-pull-right appmy_right app_pr" id="app_feedback">
+								<span class="appmy_right_span app_icon app_icon_kefu"></span>
+							</span>
+						</div>
+						<ul class="mui-table-view mui-grid-view app_bgn app_np" style="overflow: hidden;">
+							<li class="mui-table-view-cell mui-col-xs-12 app_lhno app_act_box">
+								<div class="app_act_logined">
+									<div class="app-totalValue-box">
+										<div class="app_mt5 app_f14 app_mycolor">总资产(元)</div>
+										<div class="app_f40 app_mt10">
+											<span id="app-totalValue">--</span>
+										</div>
+									</div>
+									<div class="app_see_amt"><div class="app_icon app-icon-eye mui-active"></div></div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-col-xs-6 app_mt20 app_pt0 app_pr">
+								<div class="app_f12 app_mycolor">昨日收益(元)</div>
+								<div class="app_mt5 app_f16" id="yesterday-income">--</div>
+							</li>
+							<!--<li class="mui-table-view-cell mui-col-xs-4 app_mt20 app_pt0 app-historySY-box app_block_border">
+								<div class="app_f12 app_mycolor"><span class="app_pr">累计收益(元)</span></div>
+								<div class="app_mt5 app_f16" id="app-historySY">--</div>
+							</li>-->
+							<li class="mui-table-view-cell mui-col-xs-6 app_mt20 app_pt0">
+								<div class="app_f12 app_mycolor"><span class="app_pr">可用余额(元)</span></div>
+								<div class="app_mt5 app_f16" id="app-canuse">--</div>
+							</li>
+						</ul>
+						<div class="app_clearfix">
+							<div class="app_btn_box">
+								<div class="app_btn_left" id="app-accountWithdraw">提现</div>
+							</div>
+							<!--<div class="app_btn_box">
+								<div class="app_btn_right" id="app-accountDeposit">充值</div>
+							</div>-->
+						</div>
+					</div>
+					
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell app-historySY-box">
+							<a href="javascript:;"  class="mui-navigate-right">
+								<span class="app_icon app_icon_income app_cmain"></span>
+								<span class="mui-badge mui-badge-inverted app_c3" id="app-historySY"></span>
+								累计赚取了
+							</a>
+						</li>
+						<li class="mui-table-view-cell" id="app_prot0">
+							<a href="javascript:;"  class="mui-navigate-right">
+								<span class="app_icon app_icon_myt0 app_cmain"></span>
+								<span class="mui-badge mui-badge-inverted app_c3" id="hold-t0"></span>
+								我的沪深一号
+							</a>
+						</li>
+						<li class="mui-table-view-cell" id="app_detail">
+							<a href="javascript:;"  class="mui-navigate-right">
+								<span class="app_icon app_icon_detail app_cmain"></span>
+								交易明细
+							</a>
+						</li>
+						<li class="mui-table-view-cell" id="app_record">
+							<a href="javascript:;"  class="mui-navigate-right">
+								<span class="app_icon app_icon_record app_cmain"></span>
+								<span class="mui-badge mui-badge-inverted app_c3" id="hold-t0"></span>
+								充提记录
+							</a>
+						</li>
+					</ul>
+					
+					<ul class="mui-table-view app_mt10">
+						<li class="mui-table-view-cell" id="app_coupon">
+							<a href="javascript:;"  class="mui-navigate-right">
+								<span class="app_icon app_icon_ticket app_cmain"></span>
+								<span class="mui-badge mui-badge-inverted app_c3"></span>
+								优惠券
+							</a>
+						</li>
+						<li class="mui-table-view-cell" id="app_invitefriends">
+							<a href="javascript:;"  class="mui-navigate-right">
+								<span class="app_icon app_icon_offer2 app_cmain"></span>
+								<span class="mui-badge mui-badge-inverted app_c3"></span>
+								邀请好友
+							</a>
+						</li>
+					</ul>
+					
+					<ul class="mui-table-view app_mt10">
+						<li class="mui-table-view-cell" id="app_about">
+							<a href="javascript:;"  class="mui-navigate-right">
+								<span class="app_icon app_icon_about app_cmain"></span>
+								<span class="mui-badge mui-badge-inverted app_c3"></span>
+								关于我们
+							</a>
+						</li>
+					</ul>					
+				</div>
+			<div class="clear"></div>
+			</div>
+		</div>
+		<nav class="app-bar app-bar-tab app_nav_bottom">
+			<a class="app-tab-item app_links" href="javascript:;" data-url="../../html/index/index.html" id="app_homepage">
+				<span class="mui-icon app_icon app_icon_home"></span>
+				<span class="mui-tab-label">理财</span>
+			</a>
+			<a class="app-tab-item app_links" href="javascript:;" data-url="../../html/activity/activities.html">
+				<span class="mui-icon app_icon app_icon_tn"></span>
+				<span class="mui-tab-label">福利</span>
+			</a>
+			<a class="app-tab-item app_links app-active"  href="javascript:;" data-url="../../html/account/account.html" data-checklogin="true" id="app_account">
+				<span class="mui-icon app_icon app_icon_my"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/account/account.js"></script>
+        
+	</body>
+</html>

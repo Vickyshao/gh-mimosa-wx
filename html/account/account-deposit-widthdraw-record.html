@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>充提记录</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style>
+			.app_list_wrapper {top: 88px}
+			.app_list_wrapper .app_slider_down {top: 88px}
+			.mui-bar.app_mui_bar {z-index: 99999;}
+			.mui-grid-view.mui-grid-9 .mui-media.app_active {color: #ff7f1a;}
+			.app_links .app_icon {display: none;font-size: 20px;}
+			.app_links.app_active .app_icon {display: block;}
+			.app_dialog{margin-top:86px;}.app_dialog_box{top:86px;}
+			.mui-table-view-cell.mui-col-xs-4.mui-text-left{width:28.333333%}
+			.mui-table-view-cell.mui-col-xs-6.mui-text-left{width: 56%;}
+			.mui-table-view.mui-grid-view .mui-table-view-cell{padding-left:10px;}
+			.mui-table-view.mui-grid-view .mui-table-view-cell{overflow: visible;}
+			@media only screen and (max-width: 400px){
+				.mui-table-view.mui-grid-view .mui-table-view-cell {
+				    font-size: 12px;
+				}
+			}
+			.app_br0{border-right: 0 !important;}
+		</style>
+	</head>
+	<body class="app_pull_pt account-deal">
+		<header class="mui-bar mui-bar-nav app_header app_nbborder app_mui_bar">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">充提记录</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view mui-grid-view mui-text-center mui-grid-9 app_filter_nav app_ztop">
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 app_links app_active" data-tradeType="" id="app_filter_btn_all">全部</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 app_br0" id="app_filter_btn">
+					<label id="typeName">交易类型</label>
+					<span class="app_icon_box" id="app_icon_box">
+						<img src="../../images/icon_arrow_down.png" class="app_filter_icons_open app_filter_icons_rotate"/>
+					</span>
+				</li>
+			</ul>
+		</div>
+		<div class="mui-content">
+			<div class="mui-scroll-wrapper" id="app_pullRefresh" style="margin-top:86px;overflow: auto;">
+				<div class="mui-scroll">
+					<div id="tradeList" class="app_tradelist">
+						
+					</div>
+					<div id="showMore" style="line-height: 45px;text-align: center;">点击加载更多...</div>
+				</div>
+			</div>
+		</div>
+		<div class="app_dialog app_ztop" id="app_dialog_box">
+			<ul id="sort_list" class="app_sort_box app_pop_view app_dialog_box app_slider_down app_f14" style="height: auto;width: 100%;left: 0px;">
+				<li class="mui-table-view-cell app_links app_tline" data-tradeType='["deposit","depositlong"]'>
+					<a href="javascript:;">
+						<span class="mui-pull-right app_icon app_cmain">✓</span>
+						<span class="app_sort_list_txt">充值</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell app_links" data-tradeType='["withdraw","withdrawlong"]'>
+					<a href="javascript:;">
+						<span class="mui-pull-right app_icon app_cmain">✓</span>
+						<span class="app_sort_list_txt">提现</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell app_links" data-tradeType='["offsetPositive","offsetNegative","redEnvelope"]'>
+					<a href="javascript:;">
+						<span class="mui-pull-right app_icon app_cmain">✓</span>
+						<span class="app_sort_list_txt">其他</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/account/account-deposit-widthdraw-record.js"></script>
+	</body>
+
+</html>

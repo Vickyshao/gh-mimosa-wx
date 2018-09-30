@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>活期产品详情</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.chart {
+				height: 200px;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.app_c8{color: #888888;}
+    		.app_c2{color: #222222;}
+    		.app_c9{color:#999}
+    		.app_cf4{color:#F4551F;}
+    		.app_tndetail_bg{height: 130px;width: 100%;position: relative;background: #e53d3a;}
+    		.app_tndetail_bg_div1{position: absolute;opacity: 0.25;background: #ffffff;border-radius: 8px;height: 27px;left: 20px;right: 20px;top: 15px;}
+    		.app_tndetail_bg_div2{position: absolute;opacity: 0.07;background: #ffffff;border-radius: 8px;height: 27px;left: 30px;right: 30px;top: 5px;}
+			.app_tndetail_div{height: 180px;margin-top: -115px;}
+			.app_tndetail_div_div{height: 100%;width: 100%;background-color: #fff;border-radius: 8px;position: relative;}
+			.app_tndetail_div_div_image_span{position: absolute;right: 15px;top: 15px;z-index: 2;}
+			.app_tndetail_div_div_image{width: 50%;position: relative;right: -13px;}
+			.app_tndetail_div_div_div1{height: 90px;position: relative;padding: 35px 15px 0 15px;text-align: center;}
+			.app_tndetail_div_div_div1_div1{color: #f4551f;font-size: 30px;}
+			.app_tndetail_div_div_div1_div1_span{position: relative;font-size: 20px;}
+			.app_tndetail_div_div_div1_div2{padding: 1px;}
+			.app_tndetail_div_div_div2{height: 70px;padding: 0 15px;}
+			.app_tndetail_div_div_div2 ul{height: 70px !important;padding: 0 !important;}
+			.app_tndetail_div_div_div2 ul:before {display: none;}
+    		.app_tndetail_div_div_div2 ul:after {display: none;}
+    		.app_tndetail_div_div_div2 ul li{padding: 0 !important;height: 70px !important;}
+    		.app_tndetail_div_div_div2_ul_li_div1{height: 50%;padding-top: 16px;}
+    		.app_tndetail_div_div_div2_ul_li_div2{height: 50%;line-height: 35px;}
+    		.app_line{position: absolute;top: 190px;width: 30%;height: 1px;background: #ececec;left: 35%;}
+			.tags_box{position: absolute;top: 8px;}
+			
+			.mui-fullscreen .mui-slider-group.app_sp_top { top: 50px;}
+	   		.app_tc{text-align: center;}
+	   		.app_box .app_investinput{margin: 8px 0 0 0;padding: 0;border: none;}
+	   		.boxbox{width: 100%;height: 40px;position: relative;}
+	   		.mui-segmented-control.mui-scroll-wrapper{height: 50px;}
+	   		.app-control-items{
+	   			background-image: url("../../images/measure-2.png");margin: 0;width: 50px;padding: 0;height: 40px;
+	   			background-repeat: no-repeat;
+	   			background-position: bottom;
+	   			background-size: 100% 15px;
+	   			position: relative;
+	   			line-height: 14px;
+	   			overflow: visible;
+	   			display: inline-block;
+	   			border-bottom: 1px solid #eee;	
+	   		}
+	   		.f-num{position: absolute;top: 0px;font-size: 12px;color: #dfdfdf;line-height: 14px;}
+	   		.app-control-items .num{
+	   			position: absolute;top: 0px;font-size: 12px;color: #dfdfdf;
+	   		}
+	   		.pointer{width: 1px;height :50px;position :absolute;z-index: 3;left: 50%;bottom :0;background: #f4551f;}
+	   		
+	   		.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar{background-color: #0d84f2;}
+    	</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header app_cf app_bgtop2 app_bb0 app_header0">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title app_cf"></h1>
+		</header>
+		<div class="mui-content app_mui_content0">
+			<div class="app_tndetail_bg app_top_box">
+				<div class="app_tndetail_bg_div1"></div>
+				<div class="app_tndetail_bg_div2"></div>
+			</div>
+			
+			<div class="app_tndetail_div app_p10">
+				<div class="app_tndetail_div_div">
+					<!--<span class="app_tndetail_div_div_image_span" id="app_safe">
+						<img src="../../images/app-shield.png" class="app_tndetail_div_div_image">
+					</span>-->
+					<div class="app_tndetail_div_div_div1">
+						<div class="app_tndetail_div_div_div1_div1">
+							<span id="app_label" class="app_pr"><span id="app_sevDayYrt">0</span>%</span></span>
+							<!--<span class="app_tndetail_div_div_div1_div1_span"></span>-->
+							<!--<div class="tags_box"  id="app_label">
+								<span class="app_tag_icon app_tag_c1">新手标</span>
+							</div>-->
+						</div>
+						<h5 class="app_c8">昨日年化收益率</h5>
+					</div>
+					<div class="app_tndetail_div_div_div2">
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-text-center">
+								<div class="mui-h5 app_tndetail_div_div_div2_ul_li_div1">起投金额</div>
+								<div class="mui-h5 app_c2 app_tndetail_div_div_div2_ul_li_div2"><span id="app_purchasingAmount">0</span>元</div>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-text-center">
+								<div class="mui-h5 app_tndetail_div_div_div2_ul_li_div1">收益方式</div>
+								<div class="mui-h5 app_c2 app_tndetail_div_div_div2_ul_li_div2">复利计息</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="app_box">
+				<div style="position: relative;">
+					<div class="app_tc app_pt20 app_f14 app_c6">预计每天可收益(元)</div>
+					<div class="app_tc app_mt20 app_f30 app_cred3" id="app_profit">0</div>
+					<div class="app_tc app_mt30 app_f14 app_c6">我要存(元)</div>
+					<input id="app_investMoney" type="text" class="app_tc count app_f40 app_cf4 app_investinput" value="0" oninput="GHUTILS.checkInput(this, 3)"/>
+					<div class="boxbox app_mt20">
+						<div class="pointer"></div>
+						<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						    <div class="mui-scroll" id="app_scroll">
+						    	
+						    </div>
+						</div>
+					</div>
+					<div class="app_mt10 app_bgblue"></div>
+					<div class="app_line"></div>
+				</div>
+				<div class="app_box_con app_pr">
+					<ul class="mui-table-view mui-grid-view app_noplr app_noline">
+				        <li class="mui-table-view-cell mui-col-xs-6">
+		        			<div class="app_mt5 app_f14 app_pr2em app_c9">今日申购</div>
+				        	<div class="app_mt5 app_f14 app_pr2em" id="app_t0_curDate">0000-00-00</div>
+				        </li>
+				        <li class="mui-table-view-cell mui-col-xs-6">
+		        			<div class="app_mt5 app_f14 app_pl2em app_c9">收益计算</div>
+				        	<div class="app_mt5 app_f14 app_pl2em" id="app_t0_valueDate">0000-00-00</div>
+				        </li>
+				    </ul>
+				    <div class="app_setp_icon"></div>
+				</div>
+			</div>
+			
+			<div class="app_box app_mb81">
+				<ul class="mui-table-view mui-grid-view mui-text-center mui-grid-9 app_ih_iconlink">
+					<li class="mui-table-view-cell mui-col-xs-4 app_iconc3" id="app_projectDetail">
+						<div class="app_mt10">
+							<div class="">
+								<span class="app_icon app_icon_obj app_f30"></span>
+							</div>
+						</div>
+						项目介绍
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_iconc3" id="app_profitExplanation">
+						<div class="app_mt10">
+							<div class="">
+								<span class="app_icon app_icon_instroduce app_f30"></span>
+							</div>
+						</div>
+						收益说明
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_iconc3" id="app_investRecord">
+						<div class="app_mt10">
+							<div class="app_icon_ihbox">
+								<span class="app_icon app_icon_payrecord"></span>
+							</div>
+						</div>
+						投资记录
+					</li>
+				</ul>
+			</div>
+			
+			<nav class="app-bar app-bar-tab app_nav_bottom app_iconbg3" id="app_index_bottom_nav">
+				<button id="app_invest" type="button" class="mui-btn mui-btn-block onebtn app_cf">&nbsp;</button>
+			</nav>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/echarts.simple.min.js"></script>
+		<script src="../../js/product-t0/product-t0.js"></script>
+	</body>
+</html>

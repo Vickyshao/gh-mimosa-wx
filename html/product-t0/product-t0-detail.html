@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>活期产品详情</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.app_block_border{border-right:1px solid #ffc800;}
+			.app_top_box{background: url(../../images/bg_t0.png);background-size: 100% 100%;}
+			.app_bottom_btn{position: fixed;bottom: 0px;width: 100%;z-index: 10;background: #fff;padding: 10px 0;}
+			.app_mb81{margin-bottom: 90px;}
+			.app_center{margin: 0 auto;}
+			.app_w90p{width: 90%;background: #ffad2c;color: #fff;}
+			.app_w90p.mui-btn:enabled:active{background: #ffad2c;}
+			.chart {
+				height: 230px;
+				margin: 0px;
+				padding: 0px;
+			}
+			.app_ca4{color: #a4a4a4;}
+			.app_c74{color: #747474;}
+			.app_status_off.mui-btn-block{background: #ccc !important;}
+			.app_f10 p{font-size: 10px !important;}
+    	</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header app_bb0 app_header0 app_bgtop2 app_cf">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title"></h1>
+		</header>
+		<div class="mui-content app_mui_content0">
+			<div class="app_top_box app_top_box1">
+				<ul class="mui-table-view mui-grid-view app_bgn app_np" style="overflow: hidden;">
+					<li class="mui-table-view-cell mui-col-xs-12 app_lhno app_act_box app_mt10">
+						<div class="app_act_logined">
+							<div class="app-totalValue-box">
+								<div class="app_f40">
+									<span id="app_sevDayYrt">--</span><span class="app_f24">%</span>
+								</div>
+								<div class="app_mt5 app_f14">历史最高年化收益</div>
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt20 app_pt0 app_pr app_block_border app_mb20">
+						<div class="app_f12">起投金额</div>
+						<div class="app_mt5 app_f16"><span id="app_purchasingAmount">--</span>元</div>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt20 app_pt0 app_pr app_block_border app_mb20">
+						<div class="app_f12">锁定期</div>
+						<div class="app_mt5 app_f16 app_lockPeriodDays">--</div>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt20 app_pt0 app_mb20">
+						<div class="app_f12"><span class="app_pr">已购人数</span></div>
+						<div class="app_mt5 app_f16"><span class="purchaseNum">--</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="app_box_con app_pr">
+				<ul class="mui-table-view mui-grid-view app_noplr app_noline">
+			        <li class="mui-table-view-cell mui-col-xs-6">
+	        			<div class="app_mt5 app_f14 app_pr2em app_ca4">今日转入</div>
+			        	<div class="app_mt5 app_f14 app_pr2em app_c74" id="app_t0_curDate">0000-00-00</div>
+			        </li>
+			        <li class="mui-table-view-cell mui-col-xs-6">
+	        			<div class="app_mt5 app_f14 app_pl2em app_ca4">收益计算</div>
+			        	<div class="app_mt5 app_f14 app_pl2em app_c74" id="app_t0_valueDate">0000-00-00</div>
+			        </li>
+			    </ul>
+			    <div class="app_setp_icon"></div>
+			</div>
+			
+			<div class="app_bgf mui-text-center app_pt10 app_pb10 app_mt10">锁定期<span class="app_lockPeriodDays">--</span>后可随时赎回，每30天加息，最高可达<span class="app_cred" id="app_maxInterest">--%</span></div>
+			<div id="" class="app_tline">
+				<div id="" class="mui-control-content mui-active white_bg">
+					<div class="app_pa app_p20 app_f10">
+						<p class="app_cmain">历史年化收益率(％)</p>
+						<p>实际收益请以投资时的收益为准</p>
+					</div>
+					<div class="chart" id="app_rewardRIdChart"></div>
+				</div>
+			</div>
+			<ul class="mui-table-view app_mt15 app_mb81">
+				<li class="mui-table-view-cell" id="app_introduce">
+					<a class="mui-navigate-right">产品介绍</a>
+				</li>
+				<li class="mui-table-view-cell" id="app_information">
+					<a class="mui-navigate-right">项目信息</a>
+				</li>
+				<li class="mui-table-view-cell app_links" data-url="../index/index-shortcut/index-insurance.html" data-checklogin = "false">
+					<a class="mui-navigate-right">资金保障</a>
+				</li>
+				<li class="mui-table-view-cell app_links" data-url="../setting/setting-problems.html" data-checklogin = "false">
+					<a class="mui-navigate-right">常见问题</a>
+				</li>
+				<li class="mui-table-view-cell" id="app_investRecord">
+					<a class="mui-navigate-right">投资记录<span class="mui-badge mui-badge-inverted app_c3"><span class="purchaseNum">--</span>人已赚钱</span></a>
+				</li>
+			</ul>
+			
+			<div class="app_bottom_btn" id="app_index_bottom_nav">
+				<button id="app_invest" type="button" class="mui-btn mui-btn-block app_w90p app_center">&nbsp;</button>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/echarts.simple.min.js"></script>
+		<script src="../../js/product-t0/product-t0-detail.js"></script>
+	</body>
+</html>

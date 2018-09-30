@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录密码</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    	</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 class="mui-title"><span id="app_title"></span>登录密码</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-input-group app_mt20 app_none" id="app-stepOne">
+				<div class="mui-input-row">
+					<label>原登录密码</label>
+					<input type="password" class="mui-input-password" placeholder="请输入原登录密码" id="app-oriPwd" valid='{"required":true,"msg":"原登录密码不能为空","tipsbox":"#app_tips_box","subvalid":[{"between":[6,16],"msg":"密码长度在6-16位之间"},{"passWord":true,"msg":"密码中不允许有空格"}]}' maxlength="16" oninput="GHUTILS.checkInput(this,1)"/>
+				</div>
+			</div>
+			
+			<div class="mui-input-group app_mt20 app_none" id="app-stepTwo">
+				<!--<div class="mui-input-row">
+					<label>原登录密码</label>
+					<input type="password" class="mui-input-password" placeholder="请输入原登录密码" id="app-userPwd" valid='{"required":true,"msg":"原登录密码不能为空","tipsbox":"#app_tips_box","subvalid":[{"between":[6,16],"msg":"密码长度在6-16位之间"},{"passWord":true,"msg":"密码中不允许有空格"}]}' maxlength="16" oninput="GHUTILS.checkInput(this,1)"/>
+				</div>-->
+				<div class="mui-input-row">
+					<label>新登录密码</label>
+					<input type="password" class="mui-input-password" placeholder="请输入新登录密码" id="app-userPwdNew" valid='{"required":true,"msg":"新登录密码不能为空","tipsbox":"#app_tips_box","subvalid":[{"between":[6,16],"msg":"密码长度在6-16位之间"},{"passWord":true,"msg":"密码中不允许有空格"}]}' maxlength="16" oninput="GHUTILS.checkInput(this,1)"/>
+				</div>
+				<div class="mui-input-row">
+					<label>确认新密码</label>
+					<input type="password" class="mui-input-password" placeholder="请确认新登录密码" id="app-userPwdNewConfirm" valid='{"required":true,"msg":"确认新密码不能为空","tipsbox":"#app_tips_box","subvalid":[{"equals":"app-userPwdNew","msg":"两次输入密码不一致"}]}' maxlength="16" oninput="GHUTILS.checkInput(this,1)"/>
+				</div>
+			</div>
+			
+			<div class="mui-input-group app_mt20 app_none" id="app-stepThree">
+				<div class="mui-input-row">
+					<label>登录密码</label>
+					<input type="password" class="mui-input-password" placeholder="请输入登录密码" id="app-userPwd" valid='{"required":true,"msg":"登录密码不能为空","tipsbox":"#app_tips_box","subvalid":[{"between":[6,16],"msg":"密码长度在6-16位之间"},{"passWord":true,"msg":"密码中不允许有空格"}]}' maxlength="16" oninput="GHUTILS.checkInput(this,1)"/>
+				</div>
+				<div class="mui-input-row">
+					<label>确认密码</label>
+					<input type="password" class="mui-input-password" placeholder="请确认登录密码" id="app-userPwdConfirm" valid='{"required":true,"msg":"确认密码不能为空","tipsbox":"#app_tips_box","subvalid":[{"equals":"app-userPwd","msg":"两次输入密码不一致"}]}' maxlength="16" oninput="GHUTILS.checkInput(this,1)"/>
+				</div>
+			</div>
+			<h5 class="app_pl20 app_pt10 app_cred" id="app_tips_box">&nbsp;</h5>
+			<div class="app_m20 app_none" id="app_stepOne_next_div">
+				<button id="app_stepOne_next" type="button" class="mui-btn mui-btn-primary mui-btn-block">下一步</button>
+			</div>
+			<div class="app_m20 app_none" id="app_confirm_div">
+				<button id="app_confirm" type="button" class="mui-btn mui-btn-primary mui-btn-block">确认</button>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/usermgmt/usermgmt-pwd.js"></script>
+	</body>
+</html>

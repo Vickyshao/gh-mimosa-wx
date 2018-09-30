@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>赎回</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-001 **/
+		</style>
+		<style type="text/css">
+			.mui-input-row label.app_list_labelbox{width: 100%;position: relative;z-index: 2;}
+    		.app_pt0{padding-top:0 !important;}
+    		.app_pb0{padding-bottom:0 !important;}
+    		.app_pb5{padding-bottom: 5px !important;}
+    		.app_pl15{padding-left:15px !important;}
+    		.mui-badge.mui-badge-inverted{right: 5px;}
+			.app_with_yuan .app_yuan {right: 20px;font-size: 14px;top: 16px;}
+			.app_with_yuan input{padding-left: 40px;}
+			.app_with_yuan .app_yuan_tip {left: 6px;font-size: 34px;top: 15px;width: 10px;}
+    		.app_tips_txt.app_pl5{padding-left: 5px;}
+    		.app_tips_txt{height: 44px;}
+    		.app_lh35{line-height: 35px !important;}
+    		.mui-input-group:before{height: 0;}
+    		.app_bte{border-top: 1px solid #eee;}
+    		.app_pl18{padding-left: 18px;}
+    		.mui-input-row label{padding-left: 12px;}
+    		.app_with_yuan .app_yuan{top: 23px;}
+		</style>
+	</head>
+
+	<body class="account-t0-redeem">
+		<header class="mui-bar mui-bar-nav app_header  ">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">赎回</h1>
+		</header>
+		<div class="mui-content app_mui_content0">
+			<ul class="mui-table-view app_mt10">
+				<li class="mui-table-view-cell">
+					<a href="javascript:;"  class="">
+						赎回产品<span class="mui-badge mui-badge-inverted app_productNm">--</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="javascript:;"  class="">
+						在投总额<span class="mui-badge mui-badge-inverted" id="app-amount">--</span>
+					</a>
+				</li>
+			</ul>
+			
+			<div class="mui-input-group app_mt10" id="app_redeemMoney_div">
+				<div class="mui-input-row app_with_yuan app_ml5">
+					<label class="app_w42p app_pl12">输入金额</label>
+					<input class="app_w58p" id="app_redeemMoney" type="text" name="" value="" placeholder="" maxlength="9" valid='{"required":true,"msg":"请输入赎回金额!","tipsbox":"#app_tips_box"}' maxlength="12" oninput="GHUTILS.checkInput(this,3)"/>
+					<span class="app_yuan app_box_suffix"><a href="javascript:;" id="app_redeemAll" class="app_fr app_cmain">全部</a></span>
+				</div>
+			</div>
+			
+			<h5 class="app-content-padded app_clearfix app_pr15">
+				<span id="app_tips_box" class="app_pl20 app_cred app_tips_txt">&nbsp;</span>
+			</h5>
+			<!--<div class="app_pl20 app_pr20">
+				<label class="">
+					<span id="" class="app_icon app_icon_checked app_f14 app_aggrementSpan"><input type="checkbox" checked="true" id="app_aggrement"/></span> 
+				</label>
+				<div class="app_c3b app_inline">
+					<span>我已阅读并同意</span>
+					<a href="javascript:;" class="app_cmain" app_txt_id="3" id="app_serviceFiles">《风险揭示书》</a>和
+					<a href="javascript:;" class="app_cmain" app_txt_id="3" id="app_investFiles">《定向委托投资协议》</a>
+				</div>
+			</div>-->
+			<div class="app_ml20 app_mr20 app_mt10">
+				<button id="app_redeemBtn" type="button" class="mui-btn mui-btn-primary mui-btn-block" disabled="disabled">确认</button>
+			</div>
+			<div class="app_m20 app_content_txt">
+				<p>赎回规则：</p>
+				<p>1、申购的产品满30天后可申请赎回，赎回金额可自定义。若有多笔申购请确认赎回时的金额满足多笔锁定时间；</p>
+				<p>2、当日15点前申请赎回次日可到平台账户，15点后申请赎回的顺延一日；</p>
+				<p>3、赎回成功后的资金可在平台账户余额内查询。</p>
+				<!--<p>3、系统按每个工作日处理赎回申请，赎回金额<span id="app_singleDailyMaxRedeem">--</span>；超过后请顺延至第二天重新申请。</p>-->
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/digitsToBigRMB.js"></script>
+		<!--<script src="../../js/component/bank.js"></script>-->
+		<script src="../../js/account/account-product-t0-redeem.js"></script>
+	</body>
+</html>

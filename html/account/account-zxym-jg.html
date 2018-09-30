@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>交易结果</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />	
+		<style>
+			.app_item_left{
+				 width:50%;float:left;text-align: right;margin-top:10px;
+			}
+			.app_item_right{
+				width:50%;float:left;text-align: left;margin-top:10px;
+			}
+			.app_pt0{padding-top: 0;}
+			.app_mt0{margin-top: 0;}
+			.app_icon_circle3:after{content: "";
+			    position: absolute;
+			    height: 10px;
+			    width: 10px;
+			    border-radius: 50%;
+			    border: 4px solid #D9E8F5;
+			    left: 5px;
+			    top: 9px;
+			    background: #0D84F2;}
+			.app_btn_account{border-color: #ffad2c;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header app_header0">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title"></h1>
+		</header>
+		<div class="mui-content app_con_box_jg app_none" id="app_con_box1">
+			<ul class="app_time_line_box">
+				<li class="app_time_line_view">
+					<span class="mui-icon app_icon app_icon_checkmarkempty app_f24 app_cmain"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">成功转入<span class="app_corg">￥<span class="app_send_num" id="app_send_num1"></span></span></p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time1_1"></p>
+					</div>
+				</li>
+				<li class="app_time_line_view">
+					<span class="mui-icon mui-icon-circle2 app_f2em"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">预期收益起始日</p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time1_2"></p>
+					</div>
+				</li>
+				<li class="app_time_line_view">
+					<span class="mui-icon mui-icon-circle2 app_f2em"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">预期收益到账日</p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time1_3"></p>
+					</div>
+				</li>
+			</ul>
+			<ul class="app_table_btn app_none" id="app_pttz">				
+				<li class="">
+					<button class="mui-btn mt10 mui-action-back mui-btn-block" id="">继续投资</button>
+				</li>
+				<li class="">
+					<button class="mui-btn mui-btn-primary mt10 mui-action-back mui-btn-block app_btn_account">查看我的账户</button>
+				</li>
+			</ul>
+			<div class="app_p20 app_none" id="app_tyjtz"><button class="mui-btn mui-btn-primary mt10 mui-btn-block app_btn_account" id="">查看我的账户</button></div>
+		</div>
+		<div class="mui-content app_con_box_jg mui-text-center app_none mui-text-center" id="app_con_box2">
+			<div class="app_pt50 app_bgfff app_pb10">
+				<span class="mui-icon app_icon app_icon_checkmarkempty app_f80 app_cmain"></span>
+				<p class="mui-h4 app_c3 app_pt20 app_f24">您已充值成功</p>
+				<p class="mui-h5 app_mt15 app_f18"><span class="app_cgray">充值<span class="app_send_num" id="app_send_num2"></span>元</span></p>
+			</div>
+			<div class="app_m20">
+				<button class="mui-btn mui-btn-primary mui-btn-block" id="app_btn_fhtz">前去投资</button>
+			</div>
+			<div class="app_m20">
+				<button class="mui-btn mui-btn-block app_btn_account app_cmain">查看我的账户</button>
+			</div>
+		</div>
+		<div class="mui-content app_con_box_jg app_none mui-text-center" id="app_con_box3">
+			<div class="app_pt50 app_bgfff app_pb10">
+				<span class="mui-icon app_icon app_icon_checkmarkempty app_f80 app_cmain"></span>
+				<div class="app_clearfix">
+					<p class="mui-h4 app_c3 app_pt20 app_f24">您已提现成功 </p>
+					<div class="mui-h5 app_mt15 app_f18">
+						<div class="app_item_left">
+							提现至：
+						</div>
+						<div class="app_item_right">
+							银行卡
+						</div>
+					</div>
+					<div class="mui-h5 app_mt15 app_f18">
+						<div class="app_item_left">
+							提现金额：
+						</div>
+						<div class="app_item_right">
+							<span class="app_send_num" id="app_send_num3"></span>元
+						</div>	
+					</div>
+					<div class="mui-h5 app_mt15 app_f18">
+						<div class="app_item_left">
+							提现时间：
+						</div>
+						<div class="app_item_right">
+							<span class="app_send_time" id="app_send_time3_1"></span>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="app_m20 app_mt30">
+				<button class="mui-btn mui-btn-primary mui-btn-block app_btn_ok">完成</button>
+			</div>
+		</div>
+		<div class="mui-content app_con_box_jg app_none" id="app_con_box4">
+			<ul class="app_time_line_box">
+				<li class="app_time_line_view">
+					<span class="mui-icon app_icon app_icon_checkmarkempty app_f24 app_cmain"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">成功转出<span class="app_corg">￥<span class="app_send_num" id="app_send_num4"></span></span></p>
+					</div>
+				</li>
+				<li class="app_time_line_view">
+					<span class="mui-icon mui-icon-circle2 app_f2em"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">赎回时间</p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time4_1"></p>
+					</div>
+				</li>
+			</ul>
+			<ul class="app_table_btn">				
+				<li class="">
+					<button class="mui-btn mt10 mui-action-back mui-btn-block" id="app_btn_sh">继续赎回</button>
+				</li>
+				<li class="">
+					<button class="mui-btn mui-btn-primary mt10 mui-action-back mui-btn-block app_btn_account">查看我的账户</button>
+				</li>
+			</ul>
+		</div>
+		<div class="mui-content app_con_box_jg app_none" id="app_con_box5">
+			<ul class="app_time_line_box">
+				<li class="app_time_line_view">
+					<span class="mui-icon app_icon app_icon_checkmarkempty app_f24 app_cmain"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">成功转入<span class="app_corg">￥<span class="app_send_num" id="app_send_num5"></span></span></p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time5_1"></p>
+					</div>
+				</li>
+				<li class="app_time_line_view">
+					<span class="mui-icon mui-icon-circle2 app_f2em"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">收益开始时间</p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time5_2"></p>
+					</div>
+				</li>
+				<li class="app_time_line_view">
+					<span class="mui-icon mui-icon-circle2 app_f2em"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">预计收益到账时间</p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time5_3"></p>
+					</div>
+				</li>
+			</ul>
+			<ul class="app_table_btn">				
+				<li class="">
+					<button class="mui-btn mt10 mui-btn-block" id="">继续投资</button>
+				</li>
+				<li class="">
+					<button class="mui-btn mui-btn-primary mt10 mui-btn-block app_btn_account">查看我的账户</button>
+				</li>
+			</ul>
+		</div>
+		<div class="app_m5 app_mt60 app_none" id="app_con_box6">
+			<div class="mui-text-center app_pt50 app_pb20 app_bgf" id="app_box_err">
+				<span class="app_icon app_icon_err app_f80 app_cred"></span>
+				<div class="app_mt20 app_f16">交易失败</div>
+			</div>
+			<div class="app_p20"><button class="mui-btn mt10 mui-btn-block" id="app_btn_close">关 闭</button></div>
+		</div>
+		<div class="app_m5 app_mt60 app_none" id="app_con_box7" style="margin-top: 44px;">
+			<div class="mui-text-center app_pt50 app_pb20 app_bgf">
+				<span class="mui-icon app_icon app_icon_checkmarkempty app_f80 app_cmain"></span>
+				<div class="app_mt20 app_f16">您的<span id="app_dealType"></span>申请已提交</div>
+				<div class="app_mt20 app_f16">我们将尽快确认，请您耐心等待。</div>
+			</div>
+			<div class="app_p20"><button class="mui-btn mt10 mui-btn-block app_btn_account app_cmain">关 闭</button></div>
+		</div>
+		
+		<div class="mui-content app_con_box_jg mui-text-center app_none mui-text-center app_mui_content0" id="app_con_box8">
+			<div class="app_pt50">
+				<span class="mui-icon app_icon app_icon_checkmarkempty app_f80 app_cmain"></span>
+				<p class="mui-h4 app_c3 app_pt20 app_f24">转入成功！</p>
+				<!--<p class="mui-h5 app_mt15 app_f18"><span class="app_cgray">充值<span class="app_send_num" id=""></span>元</span></p>-->
+			</div>
+			<ul class="app_time_line_box text-align-left">
+				<li class="app_time_line_view">
+					<span class="mui-icon app_icon app_icon_checkmarkempty app_f24 app_cmain"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">投资<span id="app_prodname8"></span><!--<span class="app_corg">￥<span class="app_send_num" id="">1,000.00</span></span>--></p>
+						<p class="mui-h5 app_send_time app_mt5"><span id="app_send_num8">0</span>元</p>
+					</div>
+				</li>
+				<li class="app_time_line_view">
+					<span class="mui-icon mui-icon-circle2 app_f2em"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">开始计算收益</p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time8_2">0000/00/00</p>
+					</div>
+				</li>
+				<li class="app_time_line_view">
+					<span class="mui-icon mui-icon-circle2 app_f2em"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">还本付息</p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time8_3">0000/00/00</p>
+					</div>
+				</li>
+			</ul>
+			<ul class="mui-content-padded app_mt30 app_pt20 app_table_btn app_pt0 app_mt0">
+				<li>
+					<button class="mui-btn mui-btn-block " id="app_btn_tz">继续投资</button>
+				</li>
+				<li>
+					<button class="mui-btn mui-btn-primary mui-btn-block app_btn_account">查看</button>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="mui-content app_con_box_jg mui-text-center app_none mui-text-center app_mui_content0" id="app_con_box9">
+			<div class="app_pt50">
+				<span class="mui-icon app_icon app_icon_checkmarkempty app_f80 app_cmain"></span>
+				<p class="mui-h4 app_c3 app_pt20 app_f24">转入成功！</p>
+				<!--<p class="mui-h5 app_mt15 app_f18"><span class="app_cgray">充值<span class="app_send_num" id=""></span>元</span></p>-->
+			</div>
+			<ul class="app_time_line_box text-align-left">
+				<li class="app_time_line_view">
+					<span class="mui-icon app_icon app_icon_checkmarkempty app_f24 app_cmain"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">投资<span id="app_prodname9"></span><!--<span class="app_corg">￥<span class="app_send_num" id="">1,000.00</span></span>--></p>
+						<p class="mui-h5 app_send_time app_mt5"><span id="app_send_num9">0</span>元</p>
+					</div>
+				</li>
+				<li class="app_time_line_view">
+					<span class="mui-icon mui-icon-circle2 app_f2em"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">开始计算收益</p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time9_2">0000/00/00</p>
+					</div>
+				</li>
+				<li class="app_time_line_view">
+					<span class="mui-icon mui-icon-circle2 app_f2em"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">查看收益</p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time9_3">0000/00/00</p>
+					</div>
+				</li>
+			</ul>
+			<ul class="mui-content-padded app_mt30 app_pt20 app_table_btn app_pt0 app_mt0 app_none" id="app_notTasteProd">
+				<li>
+					<button class="mui-btn mui-btn-block" id="app_btn_tzhq">继续投资</button>
+				</li>
+				<li>
+					<button class="mui-btn mui-btn-primary mui-btn-block app_btn_account">查看</button>
+				</li>
+			</ul>
+			<div class="app_m20 app_mt30 app_none" id="app_tasteProd">
+				<button class="mui-btn mui-btn-primary mui-btn-block app_btn_account">查看</button>
+			</div>
+		</div>
+		
+		<div class="mui-content app_con_box_jg mui-text-center app_none mui-text-center app_mui_content0" id="app_con_box10">
+			<div class="app_pt50 app_bgfff app_pb20">
+				<span class="mui-icon app_icon app_icon_checkmarkempty app_f80 app_cmain"></span>
+				<p class="mui-h4 app_c3 app_pt20 app_f24">赎回成功！</p>
+				<!--<p class="mui-h5 app_mt15 app_f18"><span class="app_cgray">充值<span class="app_send_num" id=""></span>元</span></p>-->
+			</div>
+			<ul class=" app_p20 text-align-left">
+				<p>赎回金额：<span id="app_send_num10">0</span>元</p>
+				<!--<p>剩余在投：<span id="app_send_num11">0</span>元</p>-->
+				<p>预计到账：<span id="app_send_time10_2">0000/00/00 00:00</span></p>
+				<!--<li class="app_time_line_view">
+					<span class="mui-icon app_icon app_icon_circle3 app_f24 app_cmain"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">成功转出<span id="app_send_num10">0</span>元</p>
+						<p class="mui-h5 app_send_time app_mt5"><span id="app_send_time10_1">0000/00/00 00:00</span></p>
+					</div>
+				</li>
+				<li class="app_time_line_view">
+					<span class="mui-icon mui-icon-circle2 app_f2em"></span>
+					<div class="app_time_view">
+						<p class="mui-h4 app_c3">预计到账</p>
+						<p class="mui-h5 app_send_time app_mt5" id="app_send_time10_2">0000/00/00</p>
+					</div>
+				</li>-->
+				<div class="app_m20">
+					<button class="mui-btn mui-btn-primary mui-btn-block" id="app_btn_shhq">继续赎回</button>
+				</div>
+				<div class="app_m20 app_mt25">
+					<button class="mui-btn mui-btn-block app_btn_account app_cmain">查看我的资产</button>
+				</div>
+			</ul>
+			<!--<div class="app_p20" id=""><button class="mui-btn mui-btn-primary mt10 mui-btn-block app_btn_account">返回</button></div>-->
+		</div>
+		
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/account/account-zxym-jg.js"></script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>微信</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.app_bgf{background-color: #fff;}
+    		.wechat_box{
+    			margin: 0 20px;
+    			border-top: 1px solid #9b9b9b;
+    			border-left: 1px solid #0d84f2;
+    			padding-top: 15px;
+    			position: relative;
+    		}
+    		.wechat_box .title{position: absolute;top: -23px;left:-11px;color: #0d84f2;}
+    		@media only screen and (min-width: 100px) and (max-width: 320px) {
+    			.wechat_box .title{font-size: 12px;}
+    		}
+    		.wechat_box .title .globe{display:inline-block;width: 22px;height: 22px;margin-right: 6px;background: #0d84f2;border-radius: 50%;color: #fff;text-align: center;line-height: 22px;font-size: 13px;}
+    		.wechat_box .con{text-align: center;padding-bottom: 80px;}
+    		.wechat_box .con img{width: 60%;}
+    		.wechat_box:first-child .con img{width: 20%;}
+    		.app_mt40{margin-top: 40px;}
+    	</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">关于微信公众号</h1>
+		</header>
+		<div class="mui-content app_bgf app_pb20">
+			<div class="wechat_box app_mt40">
+				<div class="title">
+					<span class="globe">1</span>打开微信
+				</div>
+				<div class="con">
+					<img src="../../images/weixinlogo.png" alt="" />
+				</div>
+			</div>
+			<div class="wechat_box">
+				<div class="title">
+					<span class="globe">2</span>点击添加好友
+				</div>
+				<div class="con">
+					<img src="../../images/weixin_1.png" alt="" />
+				</div>
+			</div>
+			<div class="wechat_box">
+				<div class="title">
+					<span class="globe">3</span>在空白处粘贴后搜索
+				</div>
+				<div class="con">
+					<img src="../../images/weixin_2.png" alt="" />
+				</div>
+			</div>
+			<div class="wechat_box">
+				<div class="title">
+					<span class="globe">4</span>点击关注后就可以掌握国槐科技最新资讯啦
+				</div>
+				<div class="con">
+					<img src="../../images/weixin_3.png" alt="" />
+				</div>
+			</div>
+		</div>
+	</body>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/setting/setting-about-us-wechat.js"></script>
+</html>

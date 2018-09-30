@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的活期</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style>
+			.app_txt {height: 44px;line-height: 44px;position: relative;z-index: 2;}
+			.app_top_box .mui-table-view.mui-grid-view .mui-table-view-cell{padding-left: 20px;}
+			.app_in_product_box{padding-left:0;padding-right: 0 ;}
+			.app_in_product_box .app_block_border{border-color: #f0f0f0;}
+			.app_cb2{color: #b2b2b2;}
+			.app_cred{color: #ec5c59;font-size: 24px;}
+			.app_pl20{padding-left: 20px !important;}
+			.app_pr20{padding-right: 20px !important;}
+			.app_pb0{padding-bottom: 0px !important;}
+			.app_bgfa{background-color: #fafafa;background-size: 100%;}
+			.app_pl30{padding-left: 30px;}
+			.app_in_product_box{border-top: 1px solid #e6e6e6;border-bottom: 1px solid #e6e6e6;}
+			.app_top_box{background:-webkit-gradient(linear, 0 0, 0 bottom, from(#ffac2b), to(rgba(255, 125, 53, 1))); }
+			.app_bottom_btn{position: fixed;bottom: 0px;width: 100%;background: #fff;padding:  0;z-index: 10;}
+			.app_pb60{padding-bottom: 60px;}
+		</style>
+	</head>
+
+	<body class="account-orderlist">
+		<header class="mui-bar mui-bar-nav app_header ">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">我的沪深一号</h1>
+			<span class="mui-pull-right app_txt" id="redeem_record">赎回记录</span>
+		</header>
+		<div class="mui-content ">
+			<div class="app_top_box">
+				<ul class="mui-table-view mui-grid-view app_bgn app_np" style="overflow: hidden;">
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt10 app_mb10 app_pt0 app_block_border mui-text-left app_pl20">
+						<div class="app_f12 app_cf80">昨日总收益(元)</div>
+						<div class="app_mt5 app_f16" id="yes-income">--</div>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt10 app_mb10 app_pt0 app_block_border mui-text-left app_pl20">
+						<div class="app_f12 app_cf80">在投总额(元)</div>
+						<div class="app_mt5 app_f16" id="app-amount">--</div>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-4 app_mt10 app_mb10 app_pt0 mui-text-left app_pl20">
+						<div class="app_f12 app_cf80">体验金(元)</div>
+						<div class="app_mt5 app_f16" id="app-tasteAmount">--</div>
+					</li>
+				</ul>
+			</div>
+			<div class="mui-scroll-wrapper app_t220" id="app_pullRefresh" style="top: 133px !important;bottom: 50px;">
+				<div class="mui-scroll">
+					<!--这里放置真实显示的DOM内容-->
+					<div id="proList">
+						<!--<div class="app_in_product_box app_pb0">
+							<div class="app_in_product_title app_pl20 app_pr20"><span class="app_pr">名称</span><span class="app_cmain app_fr">今日起息</span></div>
+							<ul class="mui-table-view mui-grid-view app_bgn app_np app_pb0" style="overflow: hidden;">
+								<li class="mui-table-view-cell mui-col-xs-6 app_mt10 app_mb10 app_pt0 app_block_border mui-text-left app_pl20">
+									<div class="app_f12 app_cb2">昨日收益(元)</div>
+									<div class="app_mt5 app_f16 app_cred" id="yes-income">--</div>
+								</li>
+								<li class="mui-table-view-cell mui-col-xs-6 app_mt10 app_mb10 app_pt0 mui-text-left app_pl20">
+									<div class="app_f12 app_cb2">历史年化收益</div>
+									<div class="app_mt5 app_f16 app_cred" id="app-historySY">--</div>
+								</li>
+							</ul>
+							<ul class="mui-table-view mui-grid-view app_np app_pb0 app_bgfa" style="overflow: hidden;">
+								<li class="mui-table-view-cell mui-col-xs-6 app_mt10 app_mb10 app_pt0 mui-text-left app_pl20">
+									<div class="app_f12 app_cb2">在投金额: <span class="app_c2">2000元</span></div>
+								</li>
+								<li class="mui-table-view-cell mui-col-xs-6 app_mt10 app_mb10 app_pt0 mui-text-right app_pr20">
+									<div class="app_f12 app_cb2">购买日期:<span class="app_c2">20%</span></div>
+								</li>
+							</ul>
+						</div>-->
+					</div>
+				</div>
+			</div>
+			<div class="app_bottom_btn">
+				<button id="app_redeem" type="button" class="mui-btn mui-btn-block app_w90p app_center app_cmain">赎回</button>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.material.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/account/account-product-t0-orderlist.js"></script>
+	</body>
+
+</html>

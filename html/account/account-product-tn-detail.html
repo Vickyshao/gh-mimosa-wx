@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定期详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../../css/mui.css">
+		<link rel="stylesheet" href="../../css/app.css">
+		<style>
+			h1.mui-title{z-index: -10;}
+			.app_txt{height: 44px; line-height: 44px;font-size: 15px;color: #0D84F2;}
+		</style>
+	</head>
+	<body class="account-tn-detail">
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-left-nav mui-pull-left"></span>
+			<h1 class="mui-title"></h1>
+			<span class="mui-pull-right app_txt" id="trade-record">记录明细</span>
+		</header>
+		<div class="mui-content">
+			<div class="app_top_box app_top_box1">
+						<ul class="mui-table-view mui-grid-view app_bgn app_np" style="overflow: hidden;">
+							<li class="mui-table-view-cell mui-col-xs-12 app_lhno app_act_box">
+								<div class="app_act_logined">
+									<div class="app_mt10 app_f40">
+										<span id="payAmount">0.00</span>
+									</div>
+									<div class="app_mt5 app_f14 app_cf80">预计回款金额(元)</div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-col-xs-6 app_mt20 app_pt0 app_block_border">
+								<div class="app_f12 app_cf80">投资金额(元)</div>
+								<div class="app_mt5 app_f16" id="investAmt">0.00</div>
+							</li>
+							<li class="mui-table-view-cell mui-col-xs-6 app_mt20 app_pt0" id="app-historySY-box">
+								<div class="app_f12 app_cf80">预计收益(元)</div>
+								<div class="app_mt5 app_f16" id="expectIncome">0.00</div>
+							</li>
+						</ul>
+
+					</div>
+			
+			<div class="app_box_con app_pr">
+					<ul class="mui-table-view mui-grid-view app_noplr app_noline">
+						<li class="mui-table-view-cell mui-col-xs-6">
+							<div class="app_mt5 app_f14 app_c9">起息日期</div>
+							<div class="app_mt5 app_f14" id="setupDate">0000-00-00</div>
+						</li>
+						<li class="mui-table-view-cell mui-col-xs-6">
+							<div class="app_mt5 app_f14 app_c9">到期日期</div>
+							<div class="app_mt5 app_f14" id="repayDate">0000-00-00</div>
+						</li>
+					</ul>
+					<div class="app_setpleft_icon"></div>
+				</div>
+			
+			<ul class="mui-table-view app_mt20 app_detail">
+				<li class="mui-table-view-cell"><span class="mui-pull-left">预期收益率</span><span class="mui-pull-right" id="expAror"></span></li>
+				<li class="mui-table-view-cell"><span class="mui-pull-left">收益方式</span><span class="mui-pull-right">到期还本付息</span></li>
+				<!--<li class="mui-table-view-cell"><span class="mui-pull-left">投资时间</span><span class="mui-pull-right" id="latestOrderTime">0000-00-00</span></li>-->
+			</ul>
+			<div class="app_cmain text-align-center app_mt20 app_mb20" id="app_prodetail">产品详情>></div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/account/account-product-tn-detail.js"></script>
+		<script>
+			
+		</script>
+	</body>
+</html>

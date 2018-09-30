@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>设置</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-001 **/
+		</style>
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">设置</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view app_mt10">
+				<li class="mui-table-view-cell" id="app-realname">
+					<a href="javascript:;" id="realNameDiv">
+						<span id="realName" class="mui-badge mui-badge-inverted app_c3"></span>
+						实名认证
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="javascript:;" class="">
+						<span id="showMobile" class="mui-badge mui-badge-inverted app_c3"></span>
+						手机认证
+					</a>
+				</li>
+				<li class="mui-table-view-cell" id="app_bankcard">
+					<a href="javascript:;" class="mui-navigate-right">
+						<span class="mui-badge mui-badge-inverted app_c3" id="app_banks"></span>
+						银行卡绑定
+					</a>
+				</li>
+				<li class="mui-table-view-cell app_links" data-url="setting-accountsafty.html" data-id="accountsafty" data-autoShow = "true">
+					<a class="mui-navigate-right">账户安全</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view app_mt15 ">
+				<li class="mui-table-view-cell app_links"  data-url="setting-problems.html" data-id="" data-autoShow = "true">
+					<a class="mui-navigate-right">帮助中心</a>
+				</li>
+				<li id="app_hotline" class="mui-table-view-cell">
+					客服热线
+					<span class="mui-pull-right app_cmain" id="app_hotlineNumber">400-611-8088</span>
+				</li>
+				<!--<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">检查更新</a>
+				</li>-->
+				<li class="mui-table-view-cell app_links" data-url="setting-feedback.html" data-id="" data-autoShow = "true">
+					<a class="mui-navigate-right">意见反馈</a>
+				</li>
+				<!--<li class="mui-table-view-cell app_links" data-url="setting-about-us.html" data-id="" data-autoShow = "true">
+					<a class="mui-navigate-right">关于我们</a>
+				</li>-->
+				<li class="mui-table-view-cell" id="app_serviceagreement">
+					<a class="mui-navigate-right">服务协议</a>
+				</li>
+			</ul>
+
+			<div class="app_p20 app_mt20">
+				<button id="app-confirm" type="button" class="mui-btn app_c6 mui-btn-block">安全退出</button>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/setting/setting.js"></script>
+	</body>
+
+</html>

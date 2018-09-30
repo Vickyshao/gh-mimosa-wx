@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>新手指南</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../../css/swiper.min.css" rel="stylesheet" />
+		<link href="../../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-001 **/
+		</style>
+		<style type="text/css">
+   			.app_back{
+   				color: #242424;font-size: 14px;margin-bottom: 10px;
+   			}
+   			.app_bgf{background: #fff;}
+   			.top img{width: 100%;}
+   			.top_wenzi{color: #0D84F2;font-size: 24px;font-weight: bold;line-height: 30px;}
+   			
+			.swiper-box{margin: 30px 10px 20px 10px;background: #e8e8e8;position: relative;}
+			.swiper-slide{padding: 20px 0 10px 0;}
+			.swiper-contain{margin: 0px 50px;}
+			.swiper-contain img{width: 100%;}
+			.left{z-index:1;width: 0;height: 0;background-image:none;border-width: 20px;left: -10px;border-style: solid;border-color: transparent #d3d3d3 transparent transparent ;}
+			.right{z-index:1;width: 0;height: 0;background-image:none;border-width: 20px;right: -10px;border-style: solid;border-color: transparent transparent transparent #d3d3d3;}
+			.swiper-pagination-bullet{width: 18%;margin-right: 5px;height: 30px;border-radius: 2px;line-height: 30px;background: #bdbdbd;color: #fff;opacity: 1;z-index: 1;}
+			.swiper-pagination-bullet:last-child{margin-right: 0;}
+			.swiper-pagination{top:-32px;width: 100%;z-index: 1;}
+			.swiper-pagination-bullet.swiper-pagination-bullet-active{background: #0D84F2;}
+			@media only screen  and (min-width:0px) and (max-width: 320px) {
+				.swiper-pagination-bullet{width: 50px;margin-right: 5px;font-size: 12px;height: 30px;border-radius: 2px;line-height: 30px;background: #bdbdbd;color: #fff;opacity: 1;}
+			}
+			.app_w60p{width: 60%;}
+			.bottom_box{background: #e8e8e8;padding: 30px 20px 20px 20px;}
+			.bottom-title{background: #0D84F2;line-height: 50px;font-size: 18px;}
+			.bottom-con{padding: 50px 0 20px 0;height: 200px;}
+			.app_lh24{line-height: 24px;}
+			.app_p5{padding: 5px;}
+			.step-btn{padding: 6px;
+			    background: #bdbdbd;
+			    color: #fff;
+			    border: 0;}
+			.step-btn.active {background: #0D84F2;}
+			.step-btn:active {color: #fff !important;}
+			.app_ca6{color: #a6a6a6;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav app_header">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">新手指南</h1>
+		</header>
+		<div class="mui-content app_bgf">
+			<div class="top">
+				<img src="../../../images/xinshoutu.png" alt="" />
+			</div>
+			<div class="app_mt20 text-align-center top_wenzi app_pb10">
+				投资5步宝典
+			</div>
+				
+			<div class="swiper-box">
+				<div class="text-align-center app_mb5 swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+					
+				</div>
+				    <div class="swiper-button-prev left"></div>
+				    <div class="swiper-button-next right"></div>
+				<div class="swiper-container swiper-contain">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide">
+				        	<img src="../../../images/step-1.png" alt="" />
+							<div class="app_cmain app_f18 text-align-center app_mt8 app_fb">注册</div>
+							<div class="app_mt10 app_f14 text-align-center">验证您本人的手机号，完成注册</div>
+				        </div>
+				        <div class="swiper-slide">
+				        	<img src="../../../images/step-2.png" alt="" />
+							<div class="app_cmain app_f18 text-align-center app_mt8 app_fb">认证绑卡</div>
+							<div class="app_mt10 app_f14 text-align-center">进行实名认证，绑定银行储蓄卡，开通资金进出安全账户</div>
+				        </div>
+				        <div class="swiper-slide">
+				        	<img src="../../../images/step-3.png" alt="" />
+							<div class="app_cmain app_f18 text-align-center app_mt8 app_fb">充值</div>
+							<div class="app_mt10 app_f14 text-align-center">选择您所持的银行储蓄卡，按照提示进行操作</div>
+				        </div>
+				        <div class="swiper-slide">
+				        	<img src="../../../images/step-4.png" alt="" />
+							<div class="app_cmain app_f18 text-align-center app_mt8 app_fb">投资初体验</div>
+							<div class="app_mt10 app_f14 text-align-center">选择新手专享高收益投资产品，点击立即购买，完成投资</div>
+				        </div>
+				        <div class="swiper-slide">
+				        	<img src="../../../images/step-5.png" alt="" />
+							<div class="app_cmain app_f18 text-align-center app_mt8 app_fb">查看收益</div>
+							<div class="app_mt10 app_f14 text-align-center">完成投资，下载APP，随时随地查看收益</div>
+				        </div>
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <!--<div class="swiper-pagination">
+				    </div>-->
+				    
+				    <!-- 如果需要导航按钮 -->
+				    
+				</div>
+			</div>
+			<div class="app_mt30 text-align-center top_wenzi app_pb10">
+				专享双重豪礼
+			</div>
+			<div class="text-align-center app_mt20 app_pb20"><img class="app_w60p" src="../../../images/xinshouhongbao.png" alt="" /></div>
+			<div class="bottom_box app_pt20">
+				<div class="bottom-title text-align-center app_cf">
+					超高收益&nbsp;&nbsp;&nbsp;新手专享
+				</div>
+				<div class="bottom-con text-align-center app_bgf app_cmain">
+					<div class="app_f24 app_fb">
+						<span class="app_f60">8</span> % + <span class="app_f60"> 4</span> %
+					</div>
+					<div class="app_mt20">
+						预期年化收益率
+					</div>
+					<div class="mui-col-xs-6 app_f14 app_mt30 app_mb10 app_fl text-align-center app_ca6 app_border_rdf">100起投</div>
+					<div class="mui-col-xs-6 app_fl app_f14 app_mt30 app_mb10 text-align-center app_ca6">30天期限</div>
+				</div>
+				<div class="app_mt15 app_lh24 app_p5 app_ca6">
+					温馨提示：新手标仅限无投资记录的新用户投资，每个用户仅享一次机会。如果您第一次投的不是新手标，那么将会失去新手标的投资机会哦
+				</div>
+			</div>
+		</div>
+		<script src="../../../js/component/mui.min.js"></script>
+		<script src="../../../js/component/zepto.min.js"></script>
+		<script src="../../../js/component/mui.pullToRefresh.js"></script>
+		<script src="../../../js/component/GHutils.js"></script>
+		<script src="../../../js/component/swiper-3.3.1.min.js"></script>
+		<script src="index-guide.js"></script>
+	</body>
+
+</html>
